@@ -136,6 +136,46 @@ namespace demo_core
                 npgsqlTransaction?.Commit();
             }
         }
+        public string ExecStoreToString()
+        {
+            bool flag = false;
+            if (tsnTransaction == null || tsnTransaction.Connection == null)
+            {
+                flag = true;
+                tsnTransaction = idbConn.BeginTransaction();
+            }
+
+            try
+            {
+                cmdIDbCommand.Transaction = tsnTransaction;
+                string text = string.Empty;
+                using (NpgsqlDataReader npgsqlDataReader = cmdIDbCommand.ExecuteReader())
+                {
+                    if (npgsqlDataReader.Read())
+                    {
+                        DefaultInterpolatedStringHandler defaultInterpolatedStringHandler = new DefaultInterpolatedStringHandler(16, 1);
+                        defaultInterpolatedStringHandler.AppendLiteral("FETCH ALL IN \"");
+                        defaultInterpolatedStringHandler.AppendFormatted<object>(npgsqlDataReader[0]);
+                        defaultInterpolatedStringHandler.AppendLiteral("\";");
+                        text = defaultInterpolatedStringHandler.ToStringAndClear();
+                    }
+                }
+
+                return idbConn.QueryFirstOrDefault<string>(text, null, commandType: CommandType.Text, transaction: tsnTransaction);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (flag && tsnTransaction.Connection != null)
+                {
+                    tsnTransaction.Commit();
+                    tsnTransaction = null;
+                }
+            }
+        }
         public void Dispose()
         {
             GC.SuppressFinalize(this);

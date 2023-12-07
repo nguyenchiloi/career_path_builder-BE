@@ -13,6 +13,24 @@ namespace demo_service
             _repo = repo;
         }
 
+        public ResponseMessage AddReviewPeriod(Review_Period review_period)
+        {
+            ResponseMessage rp = new ResponseMessage();
+            try
+            {
+                rp.status = MessageStatus.success;
+                rp.data = _repo.AddReviewPeriod(review_period.reviewname,review_period.timestart,review_period.timeend,review_period.pathid);
+                rp.message = "Thêm đợt đánh giá thành công";
+            }
+            catch
+            {
+                rp.status = MessageStatus.error;
+                rp.message = "Thêm đợt đánh giá thất bại";
+                rp.data = null;
+            }
+            return rp;
+        }
+
         public List<Review_Period> GetAllReviewPeriod()
         {
             return _repo.GetAllReviewPeriod();
@@ -25,6 +43,24 @@ namespace demo_service
             {
                 rp.status = MessageStatus.success;
                 rp.data = _repo.GetAllReviewPeriod();
+                rp.message = "Lấy danh sách đợt đánh giá thành công";
+            }
+            catch
+            {
+                rp.status = MessageStatus.error;
+                rp.message = "Lấy danh sách đợt đánh giá thất bại";
+                rp.data = null;
+            }
+            return rp;
+        }
+
+        public ResponseMessage GetReviewPeriod(int id)
+        {
+            ResponseMessage rp = new ResponseMessage();
+            try
+            {
+                rp.status = MessageStatus.success;
+                rp.data = _repo.GetAllReviewPeriod1(id);
                 rp.message = "Lấy danh sách đợt đánh giá thành công";
             }
             catch

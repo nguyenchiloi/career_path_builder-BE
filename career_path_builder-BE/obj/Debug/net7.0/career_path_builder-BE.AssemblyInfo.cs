@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("career_path_builder-BE")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6ea038e578f541ebd92a685093cdf775ab212280")]
 [assembly: System.Reflection.AssemblyProductAttribute("career_path_builder-BE")]
 [assembly: System.Reflection.AssemblyTitleAttribute("career_path_builder-BE")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

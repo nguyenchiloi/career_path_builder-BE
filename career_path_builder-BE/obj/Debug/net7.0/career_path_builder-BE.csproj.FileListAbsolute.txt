@@ -55,3 +55,4 @@ D:\career_path_builder-BE\career_path_builder-BE\obj\Debug\net7.0\refint\career_
 D:\career_path_builder-BE\career_path_builder-BE\obj\Debug\net7.0\career_path_builder-BE.pdb
 D:\career_path_builder-BE\career_path_builder-BE\obj\Debug\net7.0\career_path_builder-BE.genruntimeconfig.cache
 D:\career_path_builder-BE\career_path_builder-BE\obj\Debug\net7.0\ref\career_path_builder-BE.dll
+D:\career_path_builder-BE\career_path_builder-BE\obj\Debug\net7.0\career_path_builder-BE.sourcelink.json

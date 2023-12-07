@@ -36,3 +36,4 @@ D:\career_path_builder-BE\lib\demo_repository\obj\Debug\net7.0\demo_repository.d
 D:\career_path_builder-BE\lib\demo_repository\obj\Debug\net7.0\refint\demo_repository.dll
 D:\career_path_builder-BE\lib\demo_repository\obj\Debug\net7.0\demo_repository.pdb
 D:\career_path_builder-BE\lib\demo_repository\obj\Debug\net7.0\ref\demo_repository.dll
+D:\career_path_builder-BE\lib\demo_repository\obj\Debug\net7.0\demo_repository.sourcelink.json
