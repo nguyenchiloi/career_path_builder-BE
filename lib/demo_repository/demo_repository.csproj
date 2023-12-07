@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\demo_common\demo_common.csproj" />
+    <ProjectReference Include="..\demo_core\demo_core.csproj" />
+    <ProjectReference Include="..\demo_model\demo_model.csproj" />
+  </ItemGroup>
+
+</Project>
