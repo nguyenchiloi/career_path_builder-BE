@@ -804,7 +804,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MSI\\.nuget\\packages\\": {}
+    "C:\\Users\\WIN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -812,11 +812,11 @@
       "projectUniqueName": "D:\\career_path_builder-BE\\lib\\demo_service\\demo_service.csproj",
       "projectName": "demo_service",
       "projectPath": "D:\\career_path_builder-BE\\lib\\demo_service\\demo_service.csproj",
-      "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\WIN\\.nuget\\packages\\",
       "outputPath": "D:\\career_path_builder-BE\\lib\\demo_service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\WIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -864,7 +864,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
