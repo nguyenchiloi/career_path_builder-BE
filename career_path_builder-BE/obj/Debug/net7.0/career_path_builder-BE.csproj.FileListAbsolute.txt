@@ -41,6 +41,7 @@ D:\career_path_builder-BE\career_path_builder-BE\obj\Debug\net7.0\career_path_bu
 D:\career_path_builder-BE\career_path_builder-BE\obj\Debug\net7.0\career_path_builder-BE.csproj.CoreCompileInputs.cache
 D:\career_path_builder-BE\career_path_builder-BE\obj\Debug\net7.0\career_path_builder-BE.MvcApplicationPartsAssemblyInfo.cs
 D:\career_path_builder-BE\career_path_builder-BE\obj\Debug\net7.0\career_path_builder-BE.MvcApplicationPartsAssemblyInfo.cache
+D:\career_path_builder-BE\career_path_builder-BE\obj\Debug\net7.0\career_path_builder-BE.sourcelink.json
 D:\career_path_builder-BE\career_path_builder-BE\obj\Debug\net7.0\staticwebassets.build.json
 D:\career_path_builder-BE\career_path_builder-BE\obj\Debug\net7.0\staticwebassets.development.json
 D:\career_path_builder-BE\career_path_builder-BE\obj\Debug\net7.0\staticwebassets\msbuild.career_path_builder-BE.Microsoft.AspNetCore.StaticWebAssets.props
@@ -55,4 +56,3 @@ D:\career_path_builder-BE\career_path_builder-BE\obj\Debug\net7.0\refint\career_
 D:\career_path_builder-BE\career_path_builder-BE\obj\Debug\net7.0\career_path_builder-BE.pdb
 D:\career_path_builder-BE\career_path_builder-BE\obj\Debug\net7.0\career_path_builder-BE.genruntimeconfig.cache
 D:\career_path_builder-BE\career_path_builder-BE\obj\Debug\net7.0\ref\career_path_builder-BE.dll
-D:\career_path_builder-BE\career_path_builder-BE\obj\Debug\net7.0\career_path_builder-BE.sourcelink.json
