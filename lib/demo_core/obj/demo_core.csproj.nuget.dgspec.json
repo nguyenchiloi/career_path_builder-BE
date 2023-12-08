@@ -10,11 +10,11 @@
         "projectUniqueName": "D:\\career_path_builder-BE\\lib\\demo_core\\demo_core.csproj",
         "projectName": "demo_core",
         "projectPath": "D:\\career_path_builder-BE\\lib\\demo_core\\demo_core.csproj",
-        "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\WIN\\.nuget\\packages\\",
         "outputPath": "D:\\career_path_builder-BE\\lib\\demo_core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\WIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -73,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

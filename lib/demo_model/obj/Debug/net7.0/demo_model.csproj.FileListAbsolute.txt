@@ -20,4 +20,3 @@ D:\career_path_builder-BE\lib\demo_model\obj\Debug\net7.0\demo_model.dll
 D:\career_path_builder-BE\lib\demo_model\obj\Debug\net7.0\refint\demo_model.dll
 D:\career_path_builder-BE\lib\demo_model\obj\Debug\net7.0\demo_model.pdb
 D:\career_path_builder-BE\lib\demo_model\obj\Debug\net7.0\ref\demo_model.dll
-D:\career_path_builder-BE\lib\demo_model\obj\Debug\net7.0\demo_model.sourcelink.json

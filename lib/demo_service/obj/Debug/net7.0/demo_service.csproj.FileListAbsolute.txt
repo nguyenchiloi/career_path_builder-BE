@@ -40,4 +40,3 @@ D:\career_path_builder-BE\lib\demo_service\obj\Debug\net7.0\demo_service.dll
 D:\career_path_builder-BE\lib\demo_service\obj\Debug\net7.0\refint\demo_service.dll
 D:\career_path_builder-BE\lib\demo_service\obj\Debug\net7.0\demo_service.pdb
 D:\career_path_builder-BE\lib\demo_service\obj\Debug\net7.0\ref\demo_service.dll
-D:\career_path_builder-BE\lib\demo_service\obj\Debug\net7.0\demo_service.sourcelink.json
