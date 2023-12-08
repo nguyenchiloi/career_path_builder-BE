@@ -13,6 +13,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IBaseService, BaseServiceImpl>();
 builder.Services.AddScoped<IReviewPeriodService, ReviewPeriodServiceImpl>();
 builder.Services.AddScoped<IReviewPeriodRepo, ReviewPeriodRepoImpl>();
+builder.Services.AddScoped<IReviewResultDetailRepo, ReviewResultDetailImpl>();
+builder.Services.AddScoped<IReviewResultDetailService, ReviewResultDetailServiceImpl>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
