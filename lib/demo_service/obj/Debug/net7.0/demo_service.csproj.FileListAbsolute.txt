@@ -41,3 +41,25 @@ D:\career_path_builder-BE\lib\demo_service\obj\Debug\net7.0\refint\demo_service.
 D:\career_path_builder-BE\lib\demo_service\obj\Debug\net7.0\demo_service.pdb
 D:\career_path_builder-BE\lib\demo_service\obj\Debug\net7.0\ref\demo_service.dll
 D:\career_path_builder-BE\lib\demo_service\obj\Debug\net7.0\demo_service.sourcelink.json
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_service\bin\Debug\net7.0\demo_service.deps.json
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_service\bin\Debug\net7.0\demo_service.dll
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_service\bin\Debug\net7.0\demo_service.pdb
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_service\bin\Debug\net7.0\demo_common.dll
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_service\bin\Debug\net7.0\demo_core.dll
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_service\bin\Debug\net7.0\demo_model.dll
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_service\bin\Debug\net7.0\demo_repository.dll
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_service\bin\Debug\net7.0\demo_common.pdb
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_service\bin\Debug\net7.0\demo_repository.pdb
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_service\bin\Debug\net7.0\demo_core.pdb
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_service\bin\Debug\net7.0\demo_model.pdb
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_service\obj\Debug\net7.0\demo_service.csproj.AssemblyReference.cache
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_service\obj\Debug\net7.0\demo_service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_service\obj\Debug\net7.0\demo_service.AssemblyInfoInputs.cache
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_service\obj\Debug\net7.0\demo_service.AssemblyInfo.cs
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_service\obj\Debug\net7.0\demo_service.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_service\obj\Debug\net7.0\demo_service.sourcelink.json
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_service\obj\Debug\net7.0\demo_service.csproj.CopyComplete
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_service\obj\Debug\net7.0\demo_service.dll
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_service\obj\Debug\net7.0\refint\demo_service.dll
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_service\obj\Debug\net7.0\demo_service.pdb
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_service\obj\Debug\net7.0\ref\demo_service.dll

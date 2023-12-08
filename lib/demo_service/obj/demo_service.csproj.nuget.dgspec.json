@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\career_path_builder-BE\\lib\\demo_service\\demo_service.csproj": {}
+    "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_service\\demo_service.csproj": {}
   },
   "projects": {
-    "D:\\career_path_builder-BE\\lib\\demo_common\\demo_common.csproj": {
+    "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_common\\demo_common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\career_path_builder-BE\\lib\\demo_common\\demo_common.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_common\\demo_common.csproj",
         "projectName": "demo_common",
-        "projectPath": "D:\\career_path_builder-BE\\lib\\demo_common\\demo_common.csproj",
-        "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
-        "outputPath": "D:\\career_path_builder-BE\\lib\\demo_common\\obj\\",
+        "projectPath": "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_common\\demo_common.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -59,17 +59,17 @@
         }
       }
     },
-    "D:\\career_path_builder-BE\\lib\\demo_core\\demo_core.csproj": {
+    "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_core\\demo_core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\career_path_builder-BE\\lib\\demo_core\\demo_core.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_core\\demo_core.csproj",
         "projectName": "demo_core",
-        "projectPath": "D:\\career_path_builder-BE\\lib\\demo_core\\demo_core.csproj",
-        "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
-        "outputPath": "D:\\career_path_builder-BE\\lib\\demo_core\\obj\\",
+        "projectPath": "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_core\\demo_core.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -132,17 +132,17 @@
         }
       }
     },
-    "D:\\career_path_builder-BE\\lib\\demo_model\\demo_model.csproj": {
+    "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_model\\demo_model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\career_path_builder-BE\\lib\\demo_model\\demo_model.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_model\\demo_model.csproj",
         "projectName": "demo_model",
-        "projectPath": "D:\\career_path_builder-BE\\lib\\demo_model\\demo_model.csproj",
-        "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
-        "outputPath": "D:\\career_path_builder-BE\\lib\\demo_model\\obj\\",
+        "projectPath": "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_model\\demo_model.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -187,17 +187,17 @@
         }
       }
     },
-    "D:\\career_path_builder-BE\\lib\\demo_repository\\demo_repository.csproj": {
+    "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_repository\\demo_repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\career_path_builder-BE\\lib\\demo_repository\\demo_repository.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_repository\\demo_repository.csproj",
         "projectName": "demo_repository",
-        "projectPath": "D:\\career_path_builder-BE\\lib\\demo_repository\\demo_repository.csproj",
-        "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
-        "outputPath": "D:\\career_path_builder-BE\\lib\\demo_repository\\obj\\",
+        "projectPath": "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_repository\\demo_repository.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -211,14 +211,14 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\career_path_builder-BE\\lib\\demo_common\\demo_common.csproj": {
-                "projectPath": "D:\\career_path_builder-BE\\lib\\demo_common\\demo_common.csproj"
+              "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_common\\demo_common.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_common\\demo_common.csproj"
               },
-              "D:\\career_path_builder-BE\\lib\\demo_core\\demo_core.csproj": {
-                "projectPath": "D:\\career_path_builder-BE\\lib\\demo_core\\demo_core.csproj"
+              "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_core\\demo_core.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_core\\demo_core.csproj"
               },
-              "D:\\career_path_builder-BE\\lib\\demo_model\\demo_model.csproj": {
-                "projectPath": "D:\\career_path_builder-BE\\lib\\demo_model\\demo_model.csproj"
+              "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_model\\demo_model.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_model\\demo_model.csproj"
               }
             }
           }
@@ -252,17 +252,17 @@
         }
       }
     },
-    "D:\\career_path_builder-BE\\lib\\demo_service\\demo_service.csproj": {
+    "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_service\\demo_service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\career_path_builder-BE\\lib\\demo_service\\demo_service.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_service\\demo_service.csproj",
         "projectName": "demo_service",
-        "projectPath": "D:\\career_path_builder-BE\\lib\\demo_service\\demo_service.csproj",
-        "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
-        "outputPath": "D:\\career_path_builder-BE\\lib\\demo_service\\obj\\",
+        "projectPath": "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_service\\demo_service.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -276,11 +276,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\career_path_builder-BE\\lib\\demo_common\\demo_common.csproj": {
-                "projectPath": "D:\\career_path_builder-BE\\lib\\demo_common\\demo_common.csproj"
+              "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_common\\demo_common.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_common\\demo_common.csproj"
               },
-              "D:\\career_path_builder-BE\\lib\\demo_repository\\demo_repository.csproj": {
-                "projectPath": "D:\\career_path_builder-BE\\lib\\demo_repository\\demo_repository.csproj"
+              "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_repository\\demo_repository.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_repository\\demo_repository.csproj"
               }
             }
           }
