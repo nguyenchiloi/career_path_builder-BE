@@ -1,4 +1,5 @@
-﻿using System;
+﻿using demo_model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace demo_repository
 {
     public interface IReviewResultDetailRepo
     {
+        public List<ReviewResultDetail> GetReviewResultDetails();
         public string AddReviewResultDetail(double p_point, string p_note, int criteriaid, int assessorid, int reviewresultid);
     }
 }
