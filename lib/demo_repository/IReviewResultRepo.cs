@@ -10,6 +10,7 @@ namespace demo_repository
     public interface IReviewResultRepo
     {
         public List<Review_Result> GetAllReviewResult();
+        public string UpdateReviewResult(int reviewresultsid, int reviewresult);
 
     }
 }

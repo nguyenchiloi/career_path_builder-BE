@@ -34,5 +34,27 @@ namespace demo_repository
                 obj.Dispose();
             }
         }
+
+        public string UpdateReviewResult(int reviewresultsid, int reviewresult)
+        {
+            var obj = _baseService.GetConnection();
+            try
+            {
+                obj.Connect();
+                obj.CreateNewStoredProcedure("update_review_result");
+                obj.AddParameter("@reviewresulsid", reviewresultsid);
+                obj.AddParameter("@reviewresult", reviewresult);
+                return obj.ExecStoreToString();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                obj.Disconnect();
+                obj.Dispose();
+            }
+        }
     }
 }
