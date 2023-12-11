@@ -10,6 +10,7 @@ namespace demo_service
 {
     public interface IReviewResultDetailService
     {
+        public ResponseMessage GetAllReviewResultDetail();
         public ResponseMessage AddReviewResultDetail(List<Add_Review_Result_Detail> add_Review_Result_Detail);
     }
 }

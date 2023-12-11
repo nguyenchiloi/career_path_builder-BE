@@ -1,4 +1,5 @@
 ﻿using demo_core;
+using demo_model;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -29,6 +30,26 @@ namespace demo_repository
                 obj.AddParameter("@assessorid", assessorid);
                 obj.AddParameter("@reviewresultsid", reviewresultid);
                 return obj.ExecStoreToString();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                obj.Disconnect();
+                obj.Dispose();
+            }
+        }
+
+        public List<ReviewResultDetail> GetReviewResultDetails()
+        {
+            var obj = _baseService.GetConnection();
+            try
+            {
+                obj.Connect();
+                obj.CreateNewStoredProcedure("get_all_review_result_detail");
+                return obj.ExecStoreProcedureToList<ReviewResultDetail>();
             }
             catch (Exception ex)
             {

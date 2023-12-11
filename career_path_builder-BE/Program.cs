@@ -19,6 +19,10 @@ builder.Services.AddScoped<IAllReviewResultUserRepo, AllReviewResultUserRepoImpl
 builder.Services.AddScoped<IAllReviewResultUserService, AllReviewResultUserServiceImpl>();
 builder.Services.AddScoped<ICreterialLevelRepo, CreterialLevelRepoImpl>();
 builder.Services.AddScoped<ICreterialLevelService, CreterialLevelServiceImpl>();
+builder.Services.AddScoped<IReviewResultDetailRepo, ReviewResultDetailImpl>();
+builder.Services.AddScoped<IReviewResultDetailService, ReviewResultDetailServiceImpl>();
+builder.Services.AddScoped<IReviewResultRepo, ReviewResultRepoImpl>();
+builder.Services.AddScoped<IReviewResultService, ReviewResultServiceImpl>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
