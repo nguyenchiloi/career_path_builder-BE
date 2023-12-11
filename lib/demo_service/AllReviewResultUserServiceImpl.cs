@@ -44,11 +44,27 @@ namespace demo_service
         {
             var a = list.Where(x => x.criteriaid == criteriaid).ToList();
             float sum = 0;
-            int assessor = 0;
+            float assessor = 0;
             foreach (var item in a)
             {
-                sum += item.point * item.assessorid;
-                assessor += item.assessorid;
+                float heso = 0;
+                if (item.assessorid == null)
+                {
+                    heso = 1;
+                }
+                if(item.assessorid != null)
+                {
+                    if (item.userdanhgia == item.userduocdanhgia)
+                    {
+                        heso = 1;
+                    }
+                    else
+                    {
+                        heso = item.ratingcoefficient;
+                    }
+                }
+                sum+= item.point * heso;
+                assessor += heso;
             }
             float avarage = sum / assessor;
             return avarage;
