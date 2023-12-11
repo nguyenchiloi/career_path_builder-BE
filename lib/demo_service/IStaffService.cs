@@ -11,5 +11,7 @@ namespace demo_service
     public interface IStaffService
     {
         public ResponseMessage AddStaff(Staff staff);
+        public ResponseMessage GetAllStaff();
+        public ResponseMessage GetStaffByReviewId(int reviewId);
     }
 }

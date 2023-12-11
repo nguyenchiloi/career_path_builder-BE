@@ -1,10 +1,13 @@
 ﻿using demo_core;
+using demo_model;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using static NpgsqlTypes.NpgsqlTsQuery;
 
 namespace demo_repository
 {
@@ -39,6 +42,31 @@ namespace demo_repository
                 obj.Disconnect();
                 obj.Dispose();
             }
+        }
+
+        public List<Staff> GetAllStaff()
+        {
+            var obj = _baseService.GetConnection();
+            try
+            {
+                obj.Connect();
+                obj.CreateNewStoredProcedure("get_all_staff");
+                return obj.ExecStoreProcedureToList<Staff>();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                obj.Disconnect();
+                obj.Dispose();
+            }
+        }
+
+        public List<Staff> GetStaffByReviewId(int reviewId)
+        {
+            throw new NotImplementedException();
         }
     }
 }

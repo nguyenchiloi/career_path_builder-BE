@@ -22,5 +22,12 @@ namespace career_path_builder_BE.Controllers
             var add = _staffService.AddStaff(staff);
             return Ok(add);
         }
+        [HttpGet]
+        [Route("getAllStaff")]
+        public async Task<IActionResult> GetAllStaff()
+        {
+            var getStaff= _staffService.GetAllStaff();
+            return Ok(getStaff);
+        }
     }
 }
