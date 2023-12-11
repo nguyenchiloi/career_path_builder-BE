@@ -16,5 +16,6 @@ namespace demo_model
         public int userdanhgia {  get; set; }
         public float ratingcoefficient {  get; set; }
         public int userduocdanhgia { get; set; }
+        public int reviewresultsid { get; set; }
     }
 }
