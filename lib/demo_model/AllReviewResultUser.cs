@@ -13,5 +13,8 @@ namespace demo_model
         public float point {  get; set; }
         public int assessorid {  get; set; }
         public string note {  get; set; }
+        public int userdanhgia {  get; set; }
+        public float ratingcoefficient {  get; set; }
+        public int userduocdanhgia { get; set; }
     }
 }
