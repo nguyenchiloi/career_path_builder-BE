@@ -13,5 +13,6 @@ namespace demo_model
         public float point {  get; set; }
         public int assessorid {  get; set; }
         public string note {  get; set; }
+        public int reviewresultsid { get; set; }
     }
 }
