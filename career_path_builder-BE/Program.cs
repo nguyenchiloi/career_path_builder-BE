@@ -13,6 +13,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IBaseService, BaseServiceImpl>();
 builder.Services.AddScoped<IReviewPeriodService, ReviewPeriodServiceImpl>();
 builder.Services.AddScoped<IReviewPeriodRepo, ReviewPeriodRepoImpl>();
+builder.Services.AddScoped<IPathRepo, PathRepoImpl>();
+builder.Services.AddScoped<IPathService, PathServiceImpl>();
 builder.Services.AddScoped<IStaffRepo, StaffRepoImpl>();
 builder.Services.AddScoped<IStaffService, StaffServiceImpl>();
 builder.Services.AddScoped<IAllReviewResultUserRepo, AllReviewResultUserRepoImpl>();
@@ -25,6 +27,9 @@ builder.Services.AddScoped<IReviewResultRepo, ReviewResultRepoImpl>();
 builder.Services.AddScoped<IReviewResultService, ReviewResultServiceImpl>();
 builder.Services.AddScoped<ITreeLevelRepo, TreeLevelRepoImpl>();
 builder.Services.AddScoped<ITreeLevelService, TreeLevelServiceImpl>();
+builder.Services.AddScoped<ICriteriaRepo, CriteriaRepoImpl>();
+builder.Services.AddScoped<ICriteria_LevelsService, Criteria_LevelsServiceImpl>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

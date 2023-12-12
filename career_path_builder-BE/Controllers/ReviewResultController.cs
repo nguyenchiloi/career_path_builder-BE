@@ -22,5 +22,29 @@ namespace career_path_builder_BE.Controllers
             var getlist = _result.GetAllReviewResult();
             return Ok(getlist);
         }
+
+        [HttpGet]
+        [Route("getAllReviewDetailByReviewId")]
+        public async Task<IActionResult> getallreviewdetailbyreviewid(int id)
+        {
+            var getlist = _result.GetAllReviewDetailByReviewID(id);
+            return Ok(getlist);
+        }
+
+        [HttpGet]
+        [Route("getAllReviewDetailByUserId")]
+        public async Task<IActionResult> getallreviewdetailbyuserid(int id)
+        {
+            var getlist = _result.GetAllReviewDetailByUserID(id);
+            return Ok(getlist);
+        }
+
+        [HttpPost]
+        [Route("addReviewResult")]
+        public async Task<IActionResult> addReviewResult(Review_Result review_Result)
+        {
+            var getlist = _result.AddReviewResult(review_Result);
+            return Ok(getlist);
+        }
     }
 }
