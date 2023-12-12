@@ -7,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace demo_repository
 {
-    public interface IReviewResultRepo
+    public interface IAllReviewResultUserRepo
     {
-        public List<Review_Result> GetAllReviewResult();
-        public string UpdateReviewResult(int reviewresultsid, int reviewresult);
-
+        public List<AllReviewResultUser> GetAllReviewResultUsers(int userId);
     }
 }
