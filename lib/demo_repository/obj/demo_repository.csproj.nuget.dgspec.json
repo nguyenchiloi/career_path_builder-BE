@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\career_path_builder-BE\\lib\\demo_repository\\demo_repository.csproj": {}
+    "D:\\INTERN\\PROJECT\\BE\\lib\\demo_repository\\demo_repository.csproj": {}
   },
   "projects": {
-    "D:\\career_path_builder-BE\\lib\\demo_common\\demo_common.csproj": {
+    "D:\\INTERN\\PROJECT\\BE\\lib\\demo_common\\demo_common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\career_path_builder-BE\\lib\\demo_common\\demo_common.csproj",
+        "projectUniqueName": "D:\\INTERN\\PROJECT\\BE\\lib\\demo_common\\demo_common.csproj",
         "projectName": "demo_common",
-        "projectPath": "D:\\career_path_builder-BE\\lib\\demo_common\\demo_common.csproj",
-        "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
-        "outputPath": "D:\\career_path_builder-BE\\lib\\demo_common\\obj\\",
+        "projectPath": "D:\\INTERN\\PROJECT\\BE\\lib\\demo_common\\demo_common.csproj",
+        "packagesPath": "C:\\Users\\Cindy Nguyen\\.nuget\\packages\\",
+        "outputPath": "D:\\INTERN\\PROJECT\\BE\\lib\\demo_common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Cindy Nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -59,17 +59,17 @@
         }
       }
     },
-    "D:\\career_path_builder-BE\\lib\\demo_core\\demo_core.csproj": {
+    "D:\\INTERN\\PROJECT\\BE\\lib\\demo_core\\demo_core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\career_path_builder-BE\\lib\\demo_core\\demo_core.csproj",
+        "projectUniqueName": "D:\\INTERN\\PROJECT\\BE\\lib\\demo_core\\demo_core.csproj",
         "projectName": "demo_core",
-        "projectPath": "D:\\career_path_builder-BE\\lib\\demo_core\\demo_core.csproj",
-        "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
-        "outputPath": "D:\\career_path_builder-BE\\lib\\demo_core\\obj\\",
+        "projectPath": "D:\\INTERN\\PROJECT\\BE\\lib\\demo_core\\demo_core.csproj",
+        "packagesPath": "C:\\Users\\Cindy Nguyen\\.nuget\\packages\\",
+        "outputPath": "D:\\INTERN\\PROJECT\\BE\\lib\\demo_core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Cindy Nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -132,17 +132,17 @@
         }
       }
     },
-    "D:\\career_path_builder-BE\\lib\\demo_model\\demo_model.csproj": {
+    "D:\\INTERN\\PROJECT\\BE\\lib\\demo_model\\demo_model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\career_path_builder-BE\\lib\\demo_model\\demo_model.csproj",
+        "projectUniqueName": "D:\\INTERN\\PROJECT\\BE\\lib\\demo_model\\demo_model.csproj",
         "projectName": "demo_model",
-        "projectPath": "D:\\career_path_builder-BE\\lib\\demo_model\\demo_model.csproj",
-        "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
-        "outputPath": "D:\\career_path_builder-BE\\lib\\demo_model\\obj\\",
+        "projectPath": "D:\\INTERN\\PROJECT\\BE\\lib\\demo_model\\demo_model.csproj",
+        "packagesPath": "C:\\Users\\Cindy Nguyen\\.nuget\\packages\\",
+        "outputPath": "D:\\INTERN\\PROJECT\\BE\\lib\\demo_model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Cindy Nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -187,17 +187,17 @@
         }
       }
     },
-    "D:\\career_path_builder-BE\\lib\\demo_repository\\demo_repository.csproj": {
+    "D:\\INTERN\\PROJECT\\BE\\lib\\demo_repository\\demo_repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\career_path_builder-BE\\lib\\demo_repository\\demo_repository.csproj",
+        "projectUniqueName": "D:\\INTERN\\PROJECT\\BE\\lib\\demo_repository\\demo_repository.csproj",
         "projectName": "demo_repository",
-        "projectPath": "D:\\career_path_builder-BE\\lib\\demo_repository\\demo_repository.csproj",
-        "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
-        "outputPath": "D:\\career_path_builder-BE\\lib\\demo_repository\\obj\\",
+        "projectPath": "D:\\INTERN\\PROJECT\\BE\\lib\\demo_repository\\demo_repository.csproj",
+        "packagesPath": "C:\\Users\\Cindy Nguyen\\.nuget\\packages\\",
+        "outputPath": "D:\\INTERN\\PROJECT\\BE\\lib\\demo_repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Cindy Nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -211,14 +211,14 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\career_path_builder-BE\\lib\\demo_common\\demo_common.csproj": {
-                "projectPath": "D:\\career_path_builder-BE\\lib\\demo_common\\demo_common.csproj"
+              "D:\\INTERN\\PROJECT\\BE\\lib\\demo_common\\demo_common.csproj": {
+                "projectPath": "D:\\INTERN\\PROJECT\\BE\\lib\\demo_common\\demo_common.csproj"
               },
-              "D:\\career_path_builder-BE\\lib\\demo_core\\demo_core.csproj": {
-                "projectPath": "D:\\career_path_builder-BE\\lib\\demo_core\\demo_core.csproj"
+              "D:\\INTERN\\PROJECT\\BE\\lib\\demo_core\\demo_core.csproj": {
+                "projectPath": "D:\\INTERN\\PROJECT\\BE\\lib\\demo_core\\demo_core.csproj"
               },
-              "D:\\career_path_builder-BE\\lib\\demo_model\\demo_model.csproj": {
-                "projectPath": "D:\\career_path_builder-BE\\lib\\demo_model\\demo_model.csproj"
+              "D:\\INTERN\\PROJECT\\BE\\lib\\demo_model\\demo_model.csproj": {
+                "projectPath": "D:\\INTERN\\PROJECT\\BE\\lib\\demo_model\\demo_model.csproj"
               }
             }
           }

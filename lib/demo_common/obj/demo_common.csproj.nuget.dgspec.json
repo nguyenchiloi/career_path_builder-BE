@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\career_path_builder-BE\\lib\\demo_common\\demo_common.csproj": {}
+    "D:\\INTERN\\PROJECT\\BE\\lib\\demo_common\\demo_common.csproj": {}
   },
   "projects": {
-    "D:\\career_path_builder-BE\\lib\\demo_common\\demo_common.csproj": {
+    "D:\\INTERN\\PROJECT\\BE\\lib\\demo_common\\demo_common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\career_path_builder-BE\\lib\\demo_common\\demo_common.csproj",
+        "projectUniqueName": "D:\\INTERN\\PROJECT\\BE\\lib\\demo_common\\demo_common.csproj",
         "projectName": "demo_common",
-        "projectPath": "D:\\career_path_builder-BE\\lib\\demo_common\\demo_common.csproj",
-        "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
-        "outputPath": "D:\\career_path_builder-BE\\lib\\demo_common\\obj\\",
+        "projectPath": "D:\\INTERN\\PROJECT\\BE\\lib\\demo_common\\demo_common.csproj",
+        "packagesPath": "C:\\Users\\Cindy Nguyen\\.nuget\\packages\\",
+        "outputPath": "D:\\INTERN\\PROJECT\\BE\\lib\\demo_common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Cindy Nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

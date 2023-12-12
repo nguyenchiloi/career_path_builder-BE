@@ -804,19 +804,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MSI\\.nuget\\packages\\": {}
+    "C:\\Users\\Cindy Nguyen\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\career_path_builder-BE\\lib\\demo_service\\demo_service.csproj",
+      "projectUniqueName": "D:\\INTERN\\PROJECT\\BE\\lib\\demo_service\\demo_service.csproj",
       "projectName": "demo_service",
-      "projectPath": "D:\\career_path_builder-BE\\lib\\demo_service\\demo_service.csproj",
-      "packagesPath": "C:\\Users\\MSI\\.nuget\\packages\\",
-      "outputPath": "D:\\career_path_builder-BE\\lib\\demo_service\\obj\\",
+      "projectPath": "D:\\INTERN\\PROJECT\\BE\\lib\\demo_service\\demo_service.csproj",
+      "packagesPath": "C:\\Users\\Cindy Nguyen\\.nuget\\packages\\",
+      "outputPath": "D:\\INTERN\\PROJECT\\BE\\lib\\demo_service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\MSI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Cindy Nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -830,11 +830,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\career_path_builder-BE\\lib\\demo_common\\demo_common.csproj": {
-              "projectPath": "D:\\career_path_builder-BE\\lib\\demo_common\\demo_common.csproj"
+            "D:\\INTERN\\PROJECT\\BE\\lib\\demo_common\\demo_common.csproj": {
+              "projectPath": "D:\\INTERN\\PROJECT\\BE\\lib\\demo_common\\demo_common.csproj"
             },
-            "D:\\career_path_builder-BE\\lib\\demo_repository\\demo_repository.csproj": {
-              "projectPath": "D:\\career_path_builder-BE\\lib\\demo_repository\\demo_repository.csproj"
+            "D:\\INTERN\\PROJECT\\BE\\lib\\demo_repository\\demo_repository.csproj": {
+              "projectPath": "D:\\INTERN\\PROJECT\\BE\\lib\\demo_repository\\demo_repository.csproj"
             }
           }
         }
