@@ -76,7 +76,7 @@ namespace demo_service
             {
                 var list = _repo.GetAllReviewResultUsers(staffId);
                 float sumCriterial1 = CriterialResult(list, 1);
-                float sumCriterial2 = CriterialResult(list, 2);
+                float sumCriterial2 = CriterialResult(list, 2);   
                 float sumCriterial3 = CriterialResult(list, 3);
                 float sumCriterial4 = CriterialResult(list, 4);
                 float sumCriterial5 = CriterialResult(list, 5);
@@ -87,7 +87,7 @@ namespace demo_service
                 sumCriterial1 , sumCriterial2 , sumCriterial3 , sumCriterial4 , sumCriterial5 , sumCriterial6
             };
 
-                var listCriterialCompare = _criterialRepo.GetAllCriterialLevel(2);
+                var listCriterialCompare = _criterialRepo.GetAllCriterialLevel(1);
                 CriterialLevel? result = null;
                 if (listCriterialCompare != null && listCriterialCompare.Count > 0)
                 {
@@ -116,7 +116,10 @@ namespace demo_service
                         }
                     }
                 }
-                _reviewResultRepo.UpdateReviewResult(list[0].reviewresultsid, result.nodeid);
+                if (result != null)
+                {
+                    _reviewResultRepo.UpdateReviewResult(list[0].reviewresultsid, result.nodeid);
+                }
                 rp.status = MessageStatus.success;
                 rp.data = result;
                 rp.message = "lấy tất cả bài đánh giá nhân viên theo key thành công";
