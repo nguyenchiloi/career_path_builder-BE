@@ -1,4 +1,5 @@
 using demo_core;
+using demo_model;
 using demo_repository;
 using demo_service;
 
@@ -13,6 +14,33 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IBaseService, BaseServiceImpl>();
 builder.Services.AddScoped<IReviewPeriodService, ReviewPeriodServiceImpl>();
 builder.Services.AddScoped<IReviewPeriodRepo, ReviewPeriodRepoImpl>();
+builder.Services.AddScoped<IPathRepo, PathRepoImpl>();
+builder.Services.AddScoped<IPathService, PathServiceImpl>();
+builder.Services.AddScoped<IStaffRepo, StaffRepoImpl>();
+builder.Services.AddScoped<IStaffService, StaffServiceImpl>();
+builder.Services.AddScoped<IAllReviewResultUserRepo, AllReviewResultUserRepoImpl>();
+builder.Services.AddScoped<IAllReviewResultUserService, AllReviewResultUserServiceImpl>();
+builder.Services.AddScoped<ICreterialLevelRepo, CreterialLevelRepoImpl>();
+builder.Services.AddScoped<ICreterialLevelService, CreterialLevelServiceImpl>();
+builder.Services.AddScoped<IReviewResultDetailRepo, ReviewResultDetailImpl>();
+builder.Services.AddScoped<IReviewResultDetailService, ReviewResultDetailServiceImpl>();
+builder.Services.AddScoped<IReviewResultRepo, ReviewResultRepoImpl>();
+builder.Services.AddScoped<IReviewResultService, ReviewResultServiceImpl>();
+builder.Services.AddScoped<ITreeLevelRepo, TreeLevelRepoImpl>();
+builder.Services.AddScoped<ITreeLevelService, TreeLevelServiceImpl>();
+builder.Services.AddScoped<ICriteriaRepo, CriteriaRepoImpl>();
+builder.Services.AddScoped<ICriteria_LevelsService, Criteria_LevelsServiceImpl>();
+//Assensor
+builder.Services.AddScoped<IAssensorRepo, AssensorRepoImpl>();
+builder.Services.AddScoped<IAssensorService, AssensorServiceImpl>();
+//Capacity
+builder.Services.AddScoped<ICapacityRepo, CapacityRepoImpl>();
+builder.Services.AddScoped<ICapacityService, CapacityServiceImpl>();
+//CriteriaByCapacity
+builder.Services.AddScoped<ICriteriaByCapacityRepo, CriteriaByCapacityRepoImpl>();
+builder.Services.AddScoped<ICriteriaByCapacityService, CriteriaByCapacityServiceImpl>();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

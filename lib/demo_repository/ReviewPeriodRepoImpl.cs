@@ -25,7 +25,7 @@ namespace demo_repository
                 return obj.ExecStoreToString();
             }catch (Exception ex)
             {
-                throw;
+                throw new Exception();
             }
             finally
             {

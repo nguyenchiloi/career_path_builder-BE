@@ -22,10 +22,10 @@ namespace demo_service
                 rp.data = _repo.AddReviewPeriod(review_period.reviewname,review_period.timestart,review_period.timeend,review_period.pathid);
                 rp.message = "Thêm đợt đánh giá thành công";
             }
-            catch
+            catch(Exception ex)
             {
                 rp.status = MessageStatus.error;
-                rp.message = "Thêm đợt đánh giá thất bại";
+                rp.message = ex.Message;
                 rp.data = null;
             }
             return rp;

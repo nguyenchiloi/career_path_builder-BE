@@ -23,3 +23,29 @@ D:\career_path_builder-BE\lib\demo_core\obj\Debug\net7.0\refint\demo_core.dll
 D:\career_path_builder-BE\lib\demo_core\obj\Debug\net7.0\demo_core.pdb
 D:\career_path_builder-BE\lib\demo_core\obj\Debug\net7.0\ref\demo_core.dll
 D:\career_path_builder-BE\lib\demo_core\obj\Debug\net7.0\demo_core.sourcelink.json
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_core\bin\Debug\net7.0\demo_core.deps.json
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_core\bin\Debug\net7.0\demo_core.dll
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_core\bin\Debug\net7.0\demo_core.pdb
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_core\obj\Debug\net7.0\demo_core.csproj.AssemblyReference.cache
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_core\obj\Debug\net7.0\demo_core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_core\obj\Debug\net7.0\demo_core.AssemblyInfoInputs.cache
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_core\obj\Debug\net7.0\demo_core.AssemblyInfo.cs
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_core\obj\Debug\net7.0\demo_core.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_core\obj\Debug\net7.0\demo_core.sourcelink.json
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_core\obj\Debug\net7.0\demo_core.dll
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_core\obj\Debug\net7.0\refint\demo_core.dll
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_core\obj\Debug\net7.0\demo_core.pdb
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_core\obj\Debug\net7.0\ref\demo_core.dll
+D:\INTERN\PROJECT\BE\lib\demo_core\bin\Debug\net7.0\demo_core.deps.json
+D:\INTERN\PROJECT\BE\lib\demo_core\bin\Debug\net7.0\demo_core.dll
+D:\INTERN\PROJECT\BE\lib\demo_core\bin\Debug\net7.0\demo_core.pdb
+D:\INTERN\PROJECT\BE\lib\demo_core\obj\Debug\net7.0\demo_core.csproj.AssemblyReference.cache
+D:\INTERN\PROJECT\BE\lib\demo_core\obj\Debug\net7.0\demo_core.GeneratedMSBuildEditorConfig.editorconfig
+D:\INTERN\PROJECT\BE\lib\demo_core\obj\Debug\net7.0\demo_core.AssemblyInfoInputs.cache
+D:\INTERN\PROJECT\BE\lib\demo_core\obj\Debug\net7.0\demo_core.AssemblyInfo.cs
+D:\INTERN\PROJECT\BE\lib\demo_core\obj\Debug\net7.0\demo_core.csproj.CoreCompileInputs.cache
+D:\INTERN\PROJECT\BE\lib\demo_core\obj\Debug\net7.0\demo_core.sourcelink.json
+D:\INTERN\PROJECT\BE\lib\demo_core\obj\Debug\net7.0\demo_core.dll
+D:\INTERN\PROJECT\BE\lib\demo_core\obj\Debug\net7.0\refint\demo_core.dll
+D:\INTERN\PROJECT\BE\lib\demo_core\obj\Debug\net7.0\demo_core.pdb
+D:\INTERN\PROJECT\BE\lib\demo_core\obj\Debug\net7.0\ref\demo_core.dll

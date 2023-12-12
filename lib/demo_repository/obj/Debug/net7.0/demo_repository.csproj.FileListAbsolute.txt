@@ -37,3 +37,43 @@ D:\career_path_builder-BE\lib\demo_repository\obj\Debug\net7.0\refint\demo_repos
 D:\career_path_builder-BE\lib\demo_repository\obj\Debug\net7.0\demo_repository.pdb
 D:\career_path_builder-BE\lib\demo_repository\obj\Debug\net7.0\ref\demo_repository.dll
 D:\career_path_builder-BE\lib\demo_repository\obj\Debug\net7.0\demo_repository.sourcelink.json
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_repository\bin\Debug\net7.0\demo_repository.deps.json
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_repository\bin\Debug\net7.0\demo_repository.dll
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_repository\bin\Debug\net7.0\demo_repository.pdb
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_repository\bin\Debug\net7.0\demo_common.dll
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_repository\bin\Debug\net7.0\demo_core.dll
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_repository\bin\Debug\net7.0\demo_model.dll
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_repository\bin\Debug\net7.0\demo_common.pdb
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_repository\bin\Debug\net7.0\demo_core.pdb
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_repository\bin\Debug\net7.0\demo_model.pdb
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_repository\obj\Debug\net7.0\demo_repository.csproj.AssemblyReference.cache
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_repository\obj\Debug\net7.0\demo_repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_repository\obj\Debug\net7.0\demo_repository.AssemblyInfoInputs.cache
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_repository\obj\Debug\net7.0\demo_repository.AssemblyInfo.cs
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_repository\obj\Debug\net7.0\demo_repository.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_repository\obj\Debug\net7.0\demo_repository.sourcelink.json
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_repository\obj\Debug\net7.0\demo_repository.csproj.CopyComplete
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_repository\obj\Debug\net7.0\demo_repository.dll
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_repository\obj\Debug\net7.0\refint\demo_repository.dll
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_repository\obj\Debug\net7.0\demo_repository.pdb
+C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_repository\obj\Debug\net7.0\ref\demo_repository.dll
+D:\INTERN\PROJECT\BE\lib\demo_repository\bin\Debug\net7.0\demo_repository.deps.json
+D:\INTERN\PROJECT\BE\lib\demo_repository\bin\Debug\net7.0\demo_repository.dll
+D:\INTERN\PROJECT\BE\lib\demo_repository\bin\Debug\net7.0\demo_repository.pdb
+D:\INTERN\PROJECT\BE\lib\demo_repository\bin\Debug\net7.0\demo_common.dll
+D:\INTERN\PROJECT\BE\lib\demo_repository\bin\Debug\net7.0\demo_core.dll
+D:\INTERN\PROJECT\BE\lib\demo_repository\bin\Debug\net7.0\demo_model.dll
+D:\INTERN\PROJECT\BE\lib\demo_repository\bin\Debug\net7.0\demo_common.pdb
+D:\INTERN\PROJECT\BE\lib\demo_repository\bin\Debug\net7.0\demo_core.pdb
+D:\INTERN\PROJECT\BE\lib\demo_repository\bin\Debug\net7.0\demo_model.pdb
+D:\INTERN\PROJECT\BE\lib\demo_repository\obj\Debug\net7.0\demo_repository.csproj.AssemblyReference.cache
+D:\INTERN\PROJECT\BE\lib\demo_repository\obj\Debug\net7.0\demo_repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\INTERN\PROJECT\BE\lib\demo_repository\obj\Debug\net7.0\demo_repository.AssemblyInfoInputs.cache
+D:\INTERN\PROJECT\BE\lib\demo_repository\obj\Debug\net7.0\demo_repository.AssemblyInfo.cs
+D:\INTERN\PROJECT\BE\lib\demo_repository\obj\Debug\net7.0\demo_repository.csproj.CoreCompileInputs.cache
+D:\INTERN\PROJECT\BE\lib\demo_repository\obj\Debug\net7.0\demo_repository.sourcelink.json
+D:\INTERN\PROJECT\BE\lib\demo_repository\obj\Debug\net7.0\demo_repository.csproj.CopyComplete
+D:\INTERN\PROJECT\BE\lib\demo_repository\obj\Debug\net7.0\demo_repository.dll
+D:\INTERN\PROJECT\BE\lib\demo_repository\obj\Debug\net7.0\refint\demo_repository.dll
+D:\INTERN\PROJECT\BE\lib\demo_repository\obj\Debug\net7.0\demo_repository.pdb
+D:\INTERN\PROJECT\BE\lib\demo_repository\obj\Debug\net7.0\ref\demo_repository.dll
