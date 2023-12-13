@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "pBNL89GtmAc4xTv60HMw3JLp4G3Dzqje0lF+VJt63s+xoLgig37cLh8ufDsHQjolgZPrytke7ZRU5tO6hck0pA==",
+  "dgSpecHash": "M7FraABpmm6909vTxzOJWCG1m9FnAHCfF1zmj88hV+952cUx6uJu3oxxmOFR7/8MtyJvkljU8sZ4qKF6dRNEag==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_common\\demo_common.csproj",
+  "projectFilePath": "D:\\INTERN\\PROJECT\\BE\\lib\\demo_common\\demo_common.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\INTERN\\PROJECT\\BE\\lib\\demo_common\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

@@ -1,4 +1,5 @@
 using demo_core;
+using demo_model;
 using demo_repository;
 using demo_service;
 
@@ -29,6 +30,16 @@ builder.Services.AddScoped<ITreeLevelRepo, TreeLevelRepoImpl>();
 builder.Services.AddScoped<ITreeLevelService, TreeLevelServiceImpl>();
 builder.Services.AddScoped<ICriteriaRepo, CriteriaRepoImpl>();
 builder.Services.AddScoped<ICriteria_LevelsService, Criteria_LevelsServiceImpl>();
+//Assensor
+builder.Services.AddScoped<IAssensorRepo, AssensorRepoImpl>();
+builder.Services.AddScoped<IAssensorService, AssensorServiceImpl>();
+//Capacity
+builder.Services.AddScoped<ICapacityRepo, CapacityRepoImpl>();
+builder.Services.AddScoped<ICapacityService, CapacityServiceImpl>();
+//CriteriaByCapacity
+builder.Services.AddScoped<ICriteriaByCapacityRepo, CriteriaByCapacityRepoImpl>();
+builder.Services.AddScoped<ICriteriaByCapacityService, CriteriaByCapacityServiceImpl>();
+
 
 var app = builder.Build();
 
