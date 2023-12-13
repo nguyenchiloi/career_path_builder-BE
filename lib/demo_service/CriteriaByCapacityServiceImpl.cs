@@ -21,6 +21,13 @@ namespace demo_service
             ResponseMessage rp = new ResponseMessage();
             try
             {
+                if (capacityid <= 0)
+                {
+                    rp.message = "Lấy danh sách tiêu chí thuộc khung năng lực không thành công";
+                    rp.status = MessageStatus.error;
+                    rp.data = null;
+                    return rp;
+                }
                 rp.message = "Lấy danh sách tiêu chí thuộc khung năng lực thành công";
                 rp.status = MessageStatus.success;
                 rp.data = _repo.GetCriteriaByCapacity(capacityid);
