@@ -1,4 +1,5 @@
 using demo_core;
+using demo_model;
 using demo_repository;
 using demo_service;
 using Serilog;
@@ -36,6 +37,17 @@ builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
 {
     builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
 }));
+//Assensor
+builder.Services.AddScoped<IAssensorRepo, AssensorRepoImpl>();
+builder.Services.AddScoped<IAssensorService, AssensorServiceImpl>();
+//Capacity
+builder.Services.AddScoped<ICapacityRepo, CapacityRepoImpl>();
+builder.Services.AddScoped<ICapacityService, CapacityServiceImpl>();
+//CriteriaByCapacity
+builder.Services.AddScoped<ICriteriaByCapacityRepo, CriteriaByCapacityRepoImpl>();
+builder.Services.AddScoped<ICriteriaByCapacityService, CriteriaByCapacityServiceImpl>();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
