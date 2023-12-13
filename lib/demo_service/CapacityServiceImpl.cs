@@ -19,20 +19,38 @@ namespace demo_service
         public ResponseMessage AddCapacity(Capacity capacity)
         {
             ResponseMessage rp = new ResponseMessage();
-            try
-            {
-                rp.message = "Thêm khung năng lực thành công";
-                rp.status = MessageStatus.success;
-                rp.data = _repo.AddCapacity(capacity.capacityname, capacity.description);
-                return rp;
+            if (capacity.capacityname!="" && capacity.description!="") {
+                try
+                {
+
+                    string res = _repo.AddCapacity(capacity.capacityname, capacity.description);
+                    rp.data = res;
+                    if (Int32.Parse(res) == -1)
+                    {
+                        rp.message = "Thêm khung năng lực không thành công";
+                        rp.status = MessageStatus.error;
+                        return rp;
+                    }
+                    rp.message = "Thêm khung năng lực thành công";
+                    rp.status = MessageStatus.success;
+                    return rp;
+                }
+                catch (Exception ex)
+                {
+                    rp.message = ex.Message;
+                    rp.status = MessageStatus.error;
+                    rp.data = null;
+                    return rp;
+                }
             }
-            catch (Exception ex)
+            else
             {
-                rp.message = ex.Message;
+                rp.message = "Thêm khung năng lực không thành công";
                 rp.status = MessageStatus.error;
                 rp.data = null;
                 return rp;
             }
+            
         }
     }
 }

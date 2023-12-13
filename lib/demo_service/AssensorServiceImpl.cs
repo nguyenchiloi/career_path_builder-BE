@@ -21,9 +21,16 @@ namespace demo_service
             ResponseMessage rp = new ResponseMessage();
             try
             {
+                string res = _repo.AddAssenor(assensor.userid, assensor.ratingcoefficient);
+                rp.data = res;
+                if ( Int32.Parse(res) == -1)
+                {
+                    rp.message = "Thêm người đánh giá không thành công";
+                    rp.status = MessageStatus.error;
+                    return rp;
+                }
                 rp.message = "Thêm người đánh giá thành công";
                 rp.status = MessageStatus.success;
-                rp.data = _repo.AddAssenor(assensor.userid, assensor.ratingcoefficient);
                 return rp;
             }
             catch (Exception ex)
