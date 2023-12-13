@@ -15,9 +15,9 @@ namespace career_path_builder_BE.Controllers
         }
         [HttpPost]
         [Route("/addAssensor")]
-        public async Task<IActionResult> AddAssensor(Assensor assensor)
+        public async Task<IActionResult> AddAssensor([FromBody] List<Assensor> assensors)
         {
-            var addAssensor = _assensorService.AddAssensor(assensor);
+            var addAssensor = _assensorService.AddAssensor(assensors);
             return Ok(addAssensor);
         }
     }

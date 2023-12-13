@@ -10,6 +10,6 @@ namespace demo_service
 {
     public interface IAssensorService
     {
-        public ResponseMessage AddAssensor(Assensor assensor);
+        public ResponseMessage AddAssensor(List<Assensor> assensors);
     }
 }

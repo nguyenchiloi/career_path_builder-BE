@@ -14,7 +14,7 @@ namespace demo_repository
         {
             this._baseService = baseService;
         }
-        public string AddAssenor(int p_userid, float p_ratingcoefficient)
+        public string AddAssenor(int p_userid, float p_ratingcoefficient, int p_reviewid)
         {
             var obj = _baseService.GetConnection();
             try
@@ -23,6 +23,7 @@ namespace demo_repository
                 obj.CreateNewStoredProcedure("add_assessor");
                 obj.AddParameter("@userid", p_userid);
                 obj.AddParameter("@ratingcoefficient", p_ratingcoefficient);
+                obj.AddParameter("@reviewid", p_reviewid);
                 return obj.ExecStoreToString();
 
             }

@@ -16,30 +16,34 @@ namespace demo_service
         {
             this._repo = repo;
         }
-        public ResponseMessage AddAssensor(Assensor assensor)
+        public ResponseMessage AddAssensor(List<Assensor> assensors)
         {
             ResponseMessage rp = new ResponseMessage();
-            try
+            int index = 0;
+            foreach (Assensor assensor in assensors)
             {
-                string res = _repo.AddAssenor(assensor.userid, assensor.ratingcoefficient);
-                rp.data = res;
-                if ( Int32.Parse(res) == -1)
-                {
-                    rp.message = "Thêm người đánh giá không thành công";
+                try {
+                    string res = _repo.AddAssenor(assensor.userid, assensor.ratingcoefficient, assensor.reviewid);
+                    if (Int32.Parse(res) == -1)
+                    {
+                        rp.message = "Thêm người đánh giá không thành công";
+                        rp.status = MessageStatus.error;
+                        rp.data = index;
+                        return rp;
+                    }
+                    index++;
+                } catch (Exception ex) {
+                    rp.message = ex.Message;
                     rp.status = MessageStatus.error;
+                    rp.data = null;
                     return rp;
                 }
-                rp.message = "Thêm người đánh giá thành công";
-                rp.status = MessageStatus.success;
-                return rp;
+                
             }
-            catch (Exception ex)
-            {
-                rp.message = ex.Message;
-                rp.status = MessageStatus.error;
-                rp.data = null;
-                return rp;
-            }
+            rp.message = "Thêm người đánh giá thành công";
+            rp.status = MessageStatus.success;
+            rp.data = null;
+            return rp;
         }
     }
 }

@@ -10,5 +10,6 @@ namespace demo_model
     {
         public int userid { get; set; }
         public float ratingcoefficient { get; set; }
+        public int reviewid { get; set; }
     }
 }
