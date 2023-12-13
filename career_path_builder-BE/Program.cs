@@ -1,9 +1,10 @@
 using demo_core;
 using demo_repository;
 using demo_service;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Host.UseSerilog((context, configuration) => configuration.ReadFrom.Configuration(context.Configuration));
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -29,7 +30,12 @@ builder.Services.AddScoped<ITreeLevelRepo, TreeLevelRepoImpl>();
 builder.Services.AddScoped<ITreeLevelService, TreeLevelServiceImpl>();
 builder.Services.AddScoped<ICriteriaRepo, CriteriaRepoImpl>();
 builder.Services.AddScoped<ICriteria_LevelsService, Criteria_LevelsServiceImpl>();
-
+builder.Services.AddScoped<ILevelRepo, LevelRepoImpl>();
+builder.Services.AddScoped<ILevelService, LevelServiceImpl>();
+builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
+{
+    builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
+}));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -37,8 +43,9 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseCors("corsapp");
 }
-
+app.UseSerilogRequestLogging();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

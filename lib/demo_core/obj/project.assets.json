@@ -735,19 +735,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ACER\\.nuget\\packages\\": {}
+    "C:\\Users\\WIN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_core\\demo_core.csproj",
+      "projectUniqueName": "D:\\career_path_builder-BE\\lib\\demo_core\\demo_core.csproj",
       "projectName": "demo_core",
-      "projectPath": "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_core\\demo_core.csproj",
-      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_core\\obj\\",
+      "projectPath": "D:\\career_path_builder-BE\\lib\\demo_core\\demo_core.csproj",
+      "packagesPath": "C:\\Users\\WIN\\.nuget\\packages\\",
+      "outputPath": "D:\\career_path_builder-BE\\lib\\demo_core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\WIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -806,7 +806,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -20,7 +20,6 @@ D:\career_path_builder-BE\lib\demo_model\obj\Debug\net7.0\demo_model.dll
 D:\career_path_builder-BE\lib\demo_model\obj\Debug\net7.0\refint\demo_model.dll
 D:\career_path_builder-BE\lib\demo_model\obj\Debug\net7.0\demo_model.pdb
 D:\career_path_builder-BE\lib\demo_model\obj\Debug\net7.0\ref\demo_model.dll
-D:\career_path_builder-BE\lib\demo_model\obj\Debug\net7.0\demo_model.sourcelink.json
 C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_model\bin\Debug\net7.0\demo_model.deps.json
 C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_model\bin\Debug\net7.0\demo_model.dll
 C:\Users\ACER\Desktop\Career path builder\Backend\BackendTeam\career_path_builder-BE\lib\demo_model\bin\Debug\net7.0\demo_model.pdb
