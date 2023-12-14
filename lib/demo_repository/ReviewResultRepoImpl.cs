@@ -15,6 +15,53 @@ namespace demo_repository
         {
             _baseService = baseService;
         }
+
+        public string AddReviewResult(Review_Result reviewResult)
+        {
+            var obj = _baseService.GetConnection();
+            try
+            {
+                obj.Connect();
+                obj.CreateNewStoredProcedure("add_review_result");
+                obj.AddParameter("@assessmenttime", reviewResult.assessmenttime);
+                obj.AddParameter("@reviewresult", reviewResult.reviewresult);
+                obj.AddParameter("@reviewid", reviewResult.reviewid);
+                obj.AddParameter("@userid", reviewResult.userid);
+                return obj.ExecStoreToString();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                obj.Disconnect();
+                obj.Dispose();
+            }
+            throw new NotImplementedException();
+        }
+
+        public List<Get_All_Review_Detail_By_ReviewId> GetAllReviewDetailByReviewId(int reviewid)
+        {
+            var obj = _baseService.GetConnection();
+            try
+            {
+                obj.Connect();
+                obj.CreateNewStoredProcedure("get_all_review_detail_by_reviewid");
+                obj.AddParameter("@reviewid", reviewid);
+                return obj.ExecStoreProcedureToList<Get_All_Review_Detail_By_ReviewId>();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                obj.Disconnect();
+                obj.Dispose();
+            }
+        }
+
         public List<Review_Result> GetAllReviewResult()
         {
             var obj = _baseService.GetConnection();
@@ -23,6 +70,27 @@ namespace demo_repository
                 obj.Connect();
                 obj.CreateNewStoredProcedure("get_all_review_result");
                 return obj.ExecStoreProcedureToList<Review_Result>();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                obj.Disconnect();
+                obj.Dispose();
+            }
+        }
+
+        public List<Get_All_Review_Detail_By_UserId> get_All_Review_Detail_By_UserIds(int userId)
+        {
+            var obj = _baseService.GetConnection();
+            try
+            {
+                obj.Connect();
+                obj.CreateNewStoredProcedure("get_all_review_detail_by_userid");
+                obj.AddParameter("@userid", userId);
+                return obj.ExecStoreProcedureToList<Get_All_Review_Detail_By_UserId>();
             }
             catch (Exception ex)
             {

@@ -25,6 +25,8 @@ builder.Services.AddScoped<IReviewResultDetailRepo, ReviewResultDetailImpl>();
 builder.Services.AddScoped<IReviewResultDetailService, ReviewResultDetailServiceImpl>();
 builder.Services.AddScoped<IReviewResultRepo, ReviewResultRepoImpl>();
 builder.Services.AddScoped<IReviewResultService, ReviewResultServiceImpl>();
+builder.Services.AddScoped<ITreeLevelRepo, TreeLevelRepoImpl>();
+builder.Services.AddScoped<ITreeLevelService, TreeLevelServiceImpl>();
 builder.Services.AddScoped<ICriteriaRepo, CriteriaRepoImpl>();
 builder.Services.AddScoped<ICriteria_LevelsService, Criteria_LevelsServiceImpl>();
 

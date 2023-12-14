@@ -17,6 +17,60 @@ namespace demo_service
             this._repo = repo;
         }
 
+        public ResponseMessage AddReviewResult(Review_Result review_Result)
+        {
+            ResponseMessage rp = new ResponseMessage();
+            try
+            {
+                rp.status = MessageStatus.success;
+                rp.data = _repo.AddReviewResult(review_Result);
+                rp.message = "Thêm danh sách thành công";
+            }
+            catch
+            {
+                rp.status = MessageStatus.error;
+                rp.message = "Thêm danh sách thất bại";
+                rp.data = null;
+            }
+            return rp;
+        }
+
+        public ResponseMessage GetAllReviewDetailByReviewID(int id)
+        {
+            ResponseMessage rp = new ResponseMessage();
+            try
+            {
+                rp.status = MessageStatus.success;
+                rp.data = _repo.GetAllReviewDetailByReviewId(id);
+                rp.message = "Lấy danh sách thành công";
+            }
+            catch
+            {
+                rp.status = MessageStatus.error;
+                rp.message = "Lấy danh sách thất bại";
+                rp.data = null;
+            }
+            return rp;
+        }
+
+        public ResponseMessage GetAllReviewDetailByUserID(int id)
+        {
+            ResponseMessage rp = new ResponseMessage();
+            try
+            {
+                rp.status = MessageStatus.success;
+                rp.data = _repo.get_All_Review_Detail_By_UserIds(id);
+                rp.message = "Lấy danh sách thành công";
+            }
+            catch
+            {
+                rp.status = MessageStatus.error;
+                rp.message = "Lấy danh sách thất bại";
+                rp.data = null;
+            }
+            return rp;
+        }
+
         public ResponseMessage GetAllReviewResult()
         {
             ResponseMessage rp = new ResponseMessage();

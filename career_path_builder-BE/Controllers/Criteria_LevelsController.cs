@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace career_path_builder_BE.Controllers
 {
-    [Route("api/")]
+    [Route("api/[controller]")]
     [ApiController]
     public class Criteria_LevelsController : ControllerBase
     {
@@ -15,7 +15,7 @@ namespace career_path_builder_BE.Controllers
             this._criteria_levelsService = criteria_levelsService;
         }
         [HttpPost]
-        [Route("/addCriteriaToLevel")]
+        [Route("addCriteriaToLevel")]
         public async Task<IActionResult> AddCriteriaToLevel(Levels_Criteria levels_Criteria)
         {
             var addCriteriaToLevel = _criteria_levelsService.AddCriteriaToLevels(levels_Criteria);
@@ -23,7 +23,7 @@ namespace career_path_builder_BE.Controllers
         }
 
         [HttpGet]
-        [Route("/GetCriteriaByLevelId")]
+        [Route("GetCriteriaByLevelId")]
         public async Task<IActionResult> GetCriteriaByLevelId(int levelId)
         {
             var getCriteriaByLevelId = _criteria_levelsService.GetCriteriaByLevel(levelId);
