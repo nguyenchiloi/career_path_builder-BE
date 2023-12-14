@@ -11,6 +11,5 @@ namespace demo_repository
     {
         public List<demo_model.Path> GetAllPath();
         public string AddPath(string p_pathname ,int p_capacityid);
-
     }
 }
