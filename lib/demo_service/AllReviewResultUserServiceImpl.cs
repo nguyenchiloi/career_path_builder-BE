@@ -99,7 +99,7 @@ namespace demo_service
                     listcriteria.Add(a);
                 }
 
-                var listCriterialCompare = _criterialRepo.GetAllCriterialLevel(1);
+                var listCriterialCompare = _criterialRepo.GetAllCriterialLevel(pathid);
                 CriterialLevel? result = null;
                 if (listCriterialCompare != null && listCriterialCompare.Count > 0)
                 {
