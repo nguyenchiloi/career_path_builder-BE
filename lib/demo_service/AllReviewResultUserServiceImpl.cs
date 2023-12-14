@@ -146,5 +146,41 @@ namespace demo_service
             }
             return rp;
         }
+
+        public ResponseMessage GetReviewResultUserByUserid(int staffid)
+        {
+            
+
+            ResponseMessage rp = new ResponseMessage();
+            try
+            {
+                var listGetAllByStaffid = _repo.GetAllReviewResultUsers(staffid);
+
+                /*var a=listGetAllByStaffid.GroupBy(x=> new {x.userdanhgia ,x.ratingcoefficient}).Select(i=> new GetAllReviewResultUser
+                {
+                    userdanhgia=i.Key.userdanhgia,
+                    dataReview=i.ToList()
+                }).ToList();*/
+
+                var a = listGetAllByStaffid.GroupBy(x =>x.userdanhgia).Select(i => new GetAllReviewResultUser
+                {
+                    userdanhgia = i.Key,
+                    dataReview = i.ToList().OrderBy(x=>x.criteriaid).ToList(),
+                }).ToList();
+
+                rp.status = MessageStatus.success;
+                rp.data = a;
+                rp.message = "lấy tất cả bài đánh giá nhân viên thành công";
+                rp.errorcode = 0;
+            }
+            catch (Exception ex)
+            {
+                rp.status = MessageStatus.error;
+                rp.message = ex.Message;
+                rp.data = null;
+                rp.errorcode = -1;
+            }
+            return rp;
+        }
     }
 }

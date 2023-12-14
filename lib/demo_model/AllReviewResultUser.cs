@@ -10,6 +10,7 @@ namespace demo_model
     {
         public int resultdetailid {  get; set; }
         public int criteriaid {  get; set; }
+        public string criterianame {  get; set; }
         public float point {  get; set; }
         public int assessorid {  get; set; }
         public string note {  get; set; }

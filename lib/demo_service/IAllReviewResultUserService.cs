@@ -11,5 +11,6 @@ namespace demo_service
     {
         public ResponseMessage GetAllReviewResultUser(int staffId);
         public ResponseMessage GetReviewResultUserByKey(int staffId, int pathid);
+        public ResponseMessage GetReviewResultUserByUserid(int staffid);
     }
 }

@@ -8,5 +8,7 @@ namespace demo_model
 {
     public class GetAllReviewResultUser
     {
+        public int userdanhgia {  get; set; }
+        public List<AllReviewResultUser> dataReview { get; set; }
     }
 }
