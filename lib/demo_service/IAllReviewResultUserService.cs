@@ -10,6 +10,6 @@ namespace demo_service
     public interface IAllReviewResultUserService
     {
         public ResponseMessage GetAllReviewResultUser(int staffId);
-        public ResponseMessage GetReviewResultUserByKey(int staffId);
+        public ResponseMessage GetReviewResultUserByKey(int staffId, int pathid);
     }
 }

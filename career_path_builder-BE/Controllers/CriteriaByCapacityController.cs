@@ -19,5 +19,12 @@ namespace career_path_builder_BE.Controllers
             var getCriterial = _criteriaByCapacityService.GetAllCriteriaByCapacity(capacityid);
             return Ok(getCriterial);
         }
+        [HttpGet]
+        [Route("getAllCriterialByPath")]
+        public async Task<IActionResult> GetAllCriterialByPath(int pathid)
+        {
+            var getCriterial = _criteriaByCapacityService.GetAllCriteriaByPathid(pathid);
+            return Ok(getCriterial);
+        }
     }
 }
