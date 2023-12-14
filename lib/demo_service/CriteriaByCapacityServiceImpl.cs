@@ -41,5 +41,24 @@ namespace demo_service
                 return rp;
             }
         }
+
+        public ResponseMessage GetAllCriteriaByPathid(int pathid)
+        {
+            ResponseMessage rp = new ResponseMessage();
+            try
+            {
+                rp.message = "Lấy danh sách tiêu chí thuộc khung năng lực thành công";
+                rp.status = MessageStatus.success;
+                rp.data = _repo.GetCriteriaByPathid(pathid);
+                return rp;
+            }
+            catch (Exception ex)
+            {
+                rp.message = ex.Message;
+                rp.status = MessageStatus.error;
+                rp.data = null;
+                return rp;
+            }
+        }
     }
 }
