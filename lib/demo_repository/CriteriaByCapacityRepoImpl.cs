@@ -36,5 +36,27 @@ namespace demo_repository
                 obj.Disconnect();
             }
         }
+
+        public List<CriteriaByCapacity> GetCriteriaByPathid(int p_pathid)
+        {
+            var obj = _baseService.GetConnection();
+            try
+            {
+                obj.Connect();
+                obj.CreateNewStoredProcedure("get_criteria_by_pathid");
+                obj.AddParameter("@pathid", p_pathid);
+                return obj.ExecStoreProcedureToList<CriteriaByCapacity>();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                obj.Dispose();
+                obj.Disconnect();
+            }
+        }
     }
 }

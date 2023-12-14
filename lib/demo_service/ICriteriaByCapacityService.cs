@@ -10,5 +10,6 @@ namespace demo_service
     public interface ICriteriaByCapacityService
     {
         public ResponseMessage GetAllCriteriaByCapacity(int capacityid);
+        public ResponseMessage GetAllCriteriaByPathid(int pathid);
     }
 }
