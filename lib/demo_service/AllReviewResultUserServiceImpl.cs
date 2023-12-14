@@ -36,7 +36,7 @@ namespace demo_service
                 rp.status = MessageStatus.error;
                 rp.message = ex.Message;
                 rp.data = null;
-                rp.errorcode = -1;
+                rp.errorcode = -1;  
             }
             return rp;
         }

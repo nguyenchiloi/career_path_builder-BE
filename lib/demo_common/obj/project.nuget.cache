@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pBNL89GtmAc4xTv60HMw3JLp4G3Dzqje0lF+VJt63s+xoLgig37cLh8ufDsHQjolgZPrytke7ZRU5tO6hck0pA==",
+  "dgSpecHash": "C+O+9jRvXYLtJ5H3TRG2QZTNgNTbCdUVNSty8HiSb5SjbTFyO+7FyleHsZ7Mb8WbM5C91Dri0F3/Kew8h4AjdA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ACER\\Desktop\\Career path builder\\Backend\\BackendTeam\\career_path_builder-BE\\lib\\demo_common\\demo_common.csproj",
+  "projectFilePath": "D:\\career_path_builder-BE\\lib\\demo_common\\demo_common.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
