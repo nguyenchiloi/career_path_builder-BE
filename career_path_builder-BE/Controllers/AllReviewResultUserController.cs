@@ -26,6 +26,14 @@ namespace career_path_builder_BE.Controllers
             return Ok(getStaff);
         }
         [HttpGet]
+        [Route("getAllReviewResultUserId")]
+        public async Task<IActionResult> GetAllReviewResultUserId(int staffId)
+        {
+            _logger.LogInformation("getAllReviewResultUser method starting");
+            var getStaff = _allReviewResultUserService.GetReviewResultUserByUserid(staffId);
+            return Ok(getStaff);
+        }
+        [HttpGet]
         [Route("getAllReviewResultUserByKey")]
         public async Task<IActionResult> GetAllResultByKey(int staffId, int pathid)
         {
