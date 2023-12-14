@@ -14,11 +14,13 @@ namespace demo_service
         private readonly IAllReviewResultUserRepo _repo;
         private readonly ICreterialLevelRepo _criterialRepo;
         private readonly IReviewResultRepo _reviewResultRepo;
-        public AllReviewResultUserServiceImpl(IAllReviewResultUserRepo repo, ICreterialLevelRepo criterialRepo, IReviewResultRepo reviewResultRepo)
+        private readonly ICriteriaByCapacityRepo _criteriaByCapacityRepo;
+        public AllReviewResultUserServiceImpl(IAllReviewResultUserRepo repo, ICreterialLevelRepo criterialRepo, IReviewResultRepo reviewResultRepo, ICriteriaByCapacityRepo criteriaByCapacityRepo)
         {
             this._repo = repo;
             this._criterialRepo = criterialRepo;
             this._reviewResultRepo = reviewResultRepo;
+            this._criteriaByCapacityRepo = criteriaByCapacityRepo;
         }
 
         public ResponseMessage GetAllReviewResultUser(int staffId)
@@ -69,25 +71,35 @@ namespace demo_service
             float avarage = sum / assessor;
             return avarage;
         }
-        public ResponseMessage GetReviewResultUserByKey(int staffId)
+        public ResponseMessage GetReviewResultUserByKey(int staffId, int pathid)
         {
             ResponseMessage rp = new ResponseMessage();
             try
             {
                 var list = _repo.GetAllReviewResultUsers(staffId);
-                float sumCriterial1 = CriterialResult(list, 1);
+                /*float sumCriterial1 = CriterialResult(list, 1);
                 float sumCriterial2 = CriterialResult(list, 2);   
                 float sumCriterial3 = CriterialResult(list, 3);
                 float sumCriterial4 = CriterialResult(list, 4);
                 float sumCriterial5 = CriterialResult(list, 5);
-                float sumCriterial6 = CriterialResult(list, 6);
+                float sumCriterial6 = CriterialResult(list, 6);*/
 
-                List<float> listcriteria = new List<float>
+
+             /*   List<float> listcriteria = new List<float>
             {
                 sumCriterial1 , sumCriterial2 , sumCriterial3 , sumCriterial4 , sumCriterial5 , sumCriterial6
-            };
+            };*/
 
-                var listCriterialCompare = _criterialRepo.GetAllCriterialLevel(1);
+                List<float> listcriteria=new List<float>();
+                //lấy danh sách tiêu chí của khung năng lực theo pathid
+                var listCriterial = _criteriaByCapacityRepo.GetCriteriaByPathid(pathid);
+                foreach (var item in listCriterial)
+                {
+                    float a = CriterialResult(list, item.criteriaid);
+                    listcriteria.Add(a);
+                }
+
+                var listCriterialCompare = _criterialRepo.GetAllCriterialLevel(pathid);
                 CriterialLevel? result = null;
                 if (listCriterialCompare != null && listCriterialCompare.Count > 0)
                 {
@@ -123,6 +135,42 @@ namespace demo_service
                 rp.status = MessageStatus.success;
                 rp.data = result;
                 rp.message = "lấy tất cả bài đánh giá nhân viên theo key thành công";
+                rp.errorcode = 0;
+            }
+            catch (Exception ex)
+            {
+                rp.status = MessageStatus.error;
+                rp.message = ex.Message;
+                rp.data = null;
+                rp.errorcode = -1;
+            }
+            return rp;
+        }
+
+        public ResponseMessage GetReviewResultUserByUserid(int staffid)
+        {
+            
+
+            ResponseMessage rp = new ResponseMessage();
+            try
+            {
+                var listGetAllByStaffid = _repo.GetAllReviewResultUsers(staffid);
+
+                /*var a=listGetAllByStaffid.GroupBy(x=> new {x.userdanhgia ,x.ratingcoefficient}).Select(i=> new GetAllReviewResultUser
+                {
+                    userdanhgia=i.Key.userdanhgia,
+                    dataReview=i.ToList()
+                }).ToList();*/
+
+                var a = listGetAllByStaffid.GroupBy(x =>x.userdanhgia).Select(i => new GetAllReviewResultUser
+                {
+                    userdanhgia = i.Key,
+                    dataReview = i.ToList().OrderBy(x=>x.criteriaid).ToList(),
+                }).ToList();
+
+                rp.status = MessageStatus.success;
+                rp.data = a;
+                rp.message = "lấy tất cả bài đánh giá nhân viên thành công";
                 rp.errorcode = 0;
             }
             catch (Exception ex)
