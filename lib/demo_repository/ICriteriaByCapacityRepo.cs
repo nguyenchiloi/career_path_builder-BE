@@ -10,5 +10,6 @@ namespace demo_repository
     public interface ICriteriaByCapacityRepo
     {
         public List<CriteriaByCapacity> GetCriteriaByCapacity(int p_capacityid);
+        public List<CriteriaByCapacity> GetCriteriaByPathid(int p_pathid);
     }
 }
