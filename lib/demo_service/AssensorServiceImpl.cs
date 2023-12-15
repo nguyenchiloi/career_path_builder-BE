@@ -23,7 +23,7 @@ namespace demo_service
             foreach (Assensor assensor in assensors)
             {
                 try {
-                    string res = _repo.AddAssenor(assensor.userid, assensor.ratingcoefficient, assensor.reviewid);
+                    string res = _repo.AddAssenor(assensor.assessorid ,assensor.userid, assensor.ratingcoefficient, assensor.reviewid);
                     if (Int32.Parse(res) == -1)
                     {
                         rp.message = "Thêm người đánh giá không thành công";

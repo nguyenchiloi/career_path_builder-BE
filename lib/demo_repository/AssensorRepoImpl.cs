@@ -14,13 +14,14 @@ namespace demo_repository
         {
             this._baseService = baseService;
         }
-        public string AddAssenor(int p_userid, float p_ratingcoefficient, int p_reviewid)
+        public string AddAssenor(int p_assessorid, int p_userid, float p_ratingcoefficient, int p_reviewid)
         {
             var obj = _baseService.GetConnection();
             try
             {
                 obj.Connect();
                 obj.CreateNewStoredProcedure("add_assessor");
+                obj.AddParameter("@assessorid", p_assessorid);
                 obj.AddParameter("@userid", p_userid);
                 obj.AddParameter("@ratingcoefficient", p_ratingcoefficient);
                 obj.AddParameter("@reviewid", p_reviewid);

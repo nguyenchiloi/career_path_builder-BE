@@ -8,6 +8,6 @@ namespace demo_repository
 {
     public interface IAssensorRepo
     {
-        public string AddAssenor(int p_userid, float p_ratingcoefficient, int p_reviewid);
+        public string AddAssenor(int p_assessorid, int p_userid, float p_ratingcoefficient, int p_reviewid);
     }
 }
