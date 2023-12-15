@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace demo_model
 {
-    public class Assensor
+    public class Assessor
     {
         public int assessorid {  get; set; }
         public int userid { get; set; }
