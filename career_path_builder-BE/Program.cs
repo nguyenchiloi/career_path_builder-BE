@@ -37,9 +37,9 @@ builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
 {
     builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
 }));
-//Assensor
-builder.Services.AddScoped<IAssensorRepo, AssensorRepoImpl>();
-builder.Services.AddScoped<IAssensorService, AssensorServiceImpl>();
+//Assessor
+builder.Services.AddScoped<IAssessorRepo, AssessorRepoImpl>();
+builder.Services.AddScoped<IAssessorService, AssessorServiceImpl>();
 //Capacity
 builder.Services.AddScoped<ICapacityRepo, CapacityRepoImpl>();
 builder.Services.AddScoped<ICapacityService, CapacityServiceImpl>();
