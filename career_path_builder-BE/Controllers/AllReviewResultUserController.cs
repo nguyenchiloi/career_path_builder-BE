@@ -1,6 +1,9 @@
-﻿using demo_service;
+﻿using demo_common;
+using demo_service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace career_path_builder_BE.Controllers
 {
@@ -41,5 +44,23 @@ namespace career_path_builder_BE.Controllers
             var getStaff = _allReviewResultUserService.GetReviewResultUserByKey(staffId, pathid);
             return Ok(getStaff);
         }
+        [HttpGet]
+        [Route("getAvarageReviewResultCompare")]
+        public IActionResult GetAvarageReviewResultCompare(int userid, int pathid)
+        {
+            _logger.LogInformation("getAvarageReviewResult method starting");
+            var getStaff = _allReviewResultUserService.GetAverageReviewResultUser(userid, pathid);
+            return Ok(getStaff);
+        }
+        /*[HttpGet]
+        [Route("getAvarageReviewResult1")]
+        public IActionResult GetAvarageReviewResult1(int pathid)
+        {
+            ResponseMessage response = new ResponseMessage();
+            _logger.LogInformation("getAvarageReviewResult method starting");
+            var getStaff = JsonConvert.SerializeObject(_allReviewResultUserService.GetAverageReviewResultOnlyUser(pathid));
+            response.data = getStaff;
+            return Ok(response);
+        }*/
     }
 }
