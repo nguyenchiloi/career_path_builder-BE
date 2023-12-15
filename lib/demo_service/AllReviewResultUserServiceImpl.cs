@@ -59,9 +59,9 @@ namespace demo_service
                 {
                     heso = 1;
                 }
-                if(item.assessorid != null)
+                if (item.assessorid != null)
                 {
-                    if (item.userdanhgia == item.userduocdanhgia)
+                    if (item.userduocdanhgia == item.assessorid)
                     {
                         heso = 1;
                     }
@@ -69,8 +69,8 @@ namespace demo_service
                     {
                         heso = item.ratingcoefficient;
                     }
-                }  
-                sum+= item.point * heso;
+                }
+                sum += item.point * heso;
                 assessor += heso;
             }
             float avarage = sum / assessor;
@@ -90,12 +90,12 @@ namespace demo_service
                 float sumCriterial6 = CriterialResult(list, 6);*/
 
 
-             /*   List<float> listcriteria = new List<float>
-            {
-                sumCriterial1 , sumCriterial2 , sumCriterial3 , sumCriterial4 , sumCriterial5 , sumCriterial6
-            };*/
+                /*   List<float> listcriteria = new List<float>
+               {
+                   sumCriterial1 , sumCriterial2 , sumCriterial3 , sumCriterial4 , sumCriterial5 , sumCriterial6
+               };*/
 
-                List<float> listcriteria=new List<float>();
+                List<float> listcriteria = new List<float>();
                 //lấy danh sách tiêu chí của khung năng lực theo pathid
                 var listCriterial = _criteriaByCapacityRepo.GetCriteriaByPathid(pathid);
                 foreach (var item in listCriterial)
@@ -135,7 +135,14 @@ namespace demo_service
                 }
                 if (result != null)
                 {
+                    result.userid = staffId;
+                    var staffname = _repo.GetAllStaff(staffId);
+                    foreach (var item in staffname)
+                    {
+                        result.staffname = item.staffName;
+                    }
                     _reviewResultRepo.UpdateReviewResult(list[0].reviewresultsid, result.nodeid);
+                    _repo.UpdateStaff(staffId, result.nodeid, result.levelname);
                 }
                 rp.status = MessageStatus.success;
                 rp.data = result;
@@ -154,7 +161,7 @@ namespace demo_service
 
         public ResponseMessage GetReviewResultUserByUserid(int staffid)
         {
-            
+
 
             ResponseMessage rp = new ResponseMessage();
             try
@@ -171,11 +178,11 @@ namespace demo_service
                     dataReview=i.ToList()
                 }).ToList();*/
 
-                var a = listGetAllByStaffid.GroupBy(x =>x.userdanhgia).Select(i => new GetAllReviewResultUser
+                var a = listGetAllByStaffid.GroupBy(x => x.userdanhgia).Select(i => new GetAllReviewResultUser
                 {
                     userdanhgia = i.Key,
-                    dataReview = i.ToList().OrderBy(x=>x.criteriaid).ToList(),
-                }).ToList();
+                    dataReview = i.ToList().OrderBy(x => x.criteriaid).ToList(),
+                }).ToList().OrderByDescending(x=>x.userdanhgia== staffid).ToList();
 
                 rp.status = MessageStatus.success;
                 rp.data = a;

@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\demo_common\demo_common.csproj" />
+    <ProjectReference Include="..\demo_model\demo_model.csproj" />
     <ProjectReference Include="..\demo_repository\demo_repository.csproj" />
   </ItemGroup>
 

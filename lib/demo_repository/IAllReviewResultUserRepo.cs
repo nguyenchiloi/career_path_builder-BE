@@ -10,5 +10,8 @@ namespace demo_repository
     public interface IAllReviewResultUserRepo
     {
         public List<AllReviewResultUser> GetAllReviewResultUsers(int userId);
+        public string UpdateStaff(int userId, int nodeid, string positionjob);
+        public List<Staff> GetAllStaff(int userId);
+
     }
 }
