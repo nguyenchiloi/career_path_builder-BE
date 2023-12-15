@@ -68,5 +68,26 @@ namespace demo_repository
         {
             throw new NotImplementedException();
         }
+
+        public List<Staff> GetStaffByUserId(int userId)
+        {
+            var obj = _baseService.GetConnection();
+            try
+            {
+                obj.Connect();
+                obj.CreateNewStoredProcedure("get_staff_by_userid");
+                obj.AddParameter("userid", userId);
+                return obj.ExecStoreProcedureToList<Staff>();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                obj.Disconnect();
+                obj.Dispose();
+            }
+        }
     }
 }
