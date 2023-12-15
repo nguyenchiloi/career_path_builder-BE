@@ -55,7 +55,7 @@ namespace demo_service
                 try
                 {
                         rp.message = "Lấy danh sách user theo người đánh giá và đợt đánh giá thành công";
-                        rp.status = MessageStatus.error;
+                        rp.status = MessageStatus.success;
                         rp.data = _repo.GetAllUserByAssessorIDReviewID(assessorID, reviewID);
                         return rp;
                 }
