@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace career_path_builder_BE.Controllers
 {
-    [Route("api/")]
+    [Route("api/[controller]")]
     [ApiController]
     public class AssessorController : ControllerBase
     {
@@ -14,14 +14,14 @@ namespace career_path_builder_BE.Controllers
             this._assessorService = assessorService;
         }
         [HttpPost]
-        [Route("/addAssensor")]
+        [Route("addAssensor")]
         public async Task<IActionResult> AddAssessor([FromBody] List<Assessor> assessors)
         {
             var addAssensor = _assessorService.AddAssessor(assessors);
             return Ok(addAssensor);
         }
         [HttpGet]
-        [Route("/getAllUserByAssessorIDReviewID")]
+        [Route("getAllUserByAssessorIDReviewID")]
         public async Task<IActionResult> GetAllUserByAssessorIDReviewID(int assessorid, int reviewid)
         {
             var addAssensor = _assessorService.GetAllUserByAssessorIDReviewID(assessorid, reviewid);
