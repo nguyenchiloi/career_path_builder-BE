@@ -1,4 +1,5 @@
 ﻿using demo_common;
+using demo_model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +13,7 @@ namespace demo_service
         public ResponseMessage GetAllReviewResultUser(int staffId);
         public ResponseMessage GetReviewResultUserByKey(int staffId, int pathid);
         public ResponseMessage GetReviewResultUserByUserid(int staffid);
+        public ResponseMessage GetAverageReviewResultUser(int listuserid, int pathid);
+
     }
 }

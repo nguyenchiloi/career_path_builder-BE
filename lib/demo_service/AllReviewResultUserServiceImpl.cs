@@ -15,12 +15,17 @@ namespace demo_service
         private readonly ICreterialLevelRepo _criterialRepo;
         private readonly IReviewResultRepo _reviewResultRepo;
         private readonly ICriteriaByCapacityRepo _criteriaByCapacityRepo;
-        public AllReviewResultUserServiceImpl(IAllReviewResultUserRepo repo, ICreterialLevelRepo criterialRepo, IReviewResultRepo reviewResultRepo, ICriteriaByCapacityRepo criteriaByCapacityRepo)
+        private readonly IReviewPeriodRepo _reviewPeriodRepo;
+        private readonly IStaffRepo _staffRepo;
+        public AllReviewResultUserServiceImpl(IAllReviewResultUserRepo repo, ICreterialLevelRepo criterialRepo, 
+            IReviewResultRepo reviewResultRepo, ICriteriaByCapacityRepo criteriaByCapacityRepo, IReviewPeriodRepo reviewPeriodRepo, IStaffRepo staffRepo)
         {
             this._repo = repo;
             this._criterialRepo = criterialRepo;
             this._reviewResultRepo = reviewResultRepo;
             this._criteriaByCapacityRepo = criteriaByCapacityRepo;
+            this._reviewPeriodRepo = reviewPeriodRepo;
+            this._staffRepo = staffRepo;
         }
 
         public ResponseMessage GetAllReviewResultUser(int staffId)
@@ -161,6 +166,10 @@ namespace demo_service
             ResponseMessage rp = new ResponseMessage();
             try
             {
+                //lấy danh sách đợt đánh giá
+                //lấy đợt gần nhất
+                var listReviewPeriod = _reviewPeriodRepo.GetAllReviewPeriod();
+
                 var listGetAllByStaffid = _repo.GetAllReviewResultUsers(staffid);
 
                 /*var a=listGetAllByStaffid.GroupBy(x=> new {x.userdanhgia ,x.ratingcoefficient}).Select(i=> new GetAllReviewResultUser
@@ -189,5 +198,53 @@ namespace demo_service
             }
             return rp;
         }
+
+        public ResponseMessage GetAverageReviewResultUser(int staffId, int pathid)
+        {
+            ResponseMessage rp = new ResponseMessage();
+            try
+            {
+                GetAllAverageReviewResultUser getAllAverageReviewResultUser = new GetAllAverageReviewResultUser();
+                var userInfo = _staffRepo.GetStaffByUserId(staffId);
+                var list = _repo.GetAllReviewResultUsers(staffId);
+
+
+                 List<float> listcriteria = new List<float>();
+                 //lấy danh sách tiêu chí của khung năng lực theo pathid
+                 var listCriterial = _criteriaByCapacityRepo.GetCriteriaByPathid(pathid);
+                 List<GetCriteriaLevelAverage> newList = new List<GetCriteriaLevelAverage>();
+                 foreach (var item in listCriterial)
+                 {
+                     float a = CriterialResult(list, item.criteriaid);
+                     GetCriteriaLevelAverage criteriaByCapacity = new GetCriteriaLevelAverage();
+                     criteriaByCapacity.criteriaid = item.criteriaid;
+                     criteriaByCapacity.criterianame = item.criterianame;
+                     criteriaByCapacity.unit = item.unit;
+                     criteriaByCapacity.point = a;
+                     newList.Add(criteriaByCapacity);
+                     listcriteria.Add(a);
+                 }
+                 getAllAverageReviewResultUser.staff = userInfo[0];
+                 getAllAverageReviewResultUser.dataReview = newList;
+                rp.status = MessageStatus.success;
+                rp.data = getAllAverageReviewResultUser;
+                rp.message = "lấy các user để so sánh thành công";
+                rp.errorcode = 0;
+            }
+            catch (Exception ex)
+            {
+                rp.status = MessageStatus.error;
+                rp.message = ex.Message;
+                rp.data = null;
+                rp.errorcode = -1;
+            }
+            return rp;
+        }
+
+        public List<GetAllAverageReviewResultUser> GetAverageReview(int pathid)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }
