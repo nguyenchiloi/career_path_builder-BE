@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace career_path_builder_BE.Controllers
 {
-    [Route("api/")]
+    [Route("api/[controller]")]
     [ApiController]
     public class CriteriaByCapacityController : ControllerBase
     {
