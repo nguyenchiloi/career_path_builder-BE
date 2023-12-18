@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace career_path_builder_BE.Controllers
 {
-    [Route("api/")]
+    [Route("api/[controller]")]
     [ApiController]
     public class CapacityController : ControllerBase
     {
@@ -14,7 +14,7 @@ namespace career_path_builder_BE.Controllers
             this._capacityService = capacityService;
         }
         [HttpPost]
-        [Route("/addCapacity")]
+        [Route("addCapacity")]
         public async Task<IActionResult> AddCapacity(Capacity capacity)
         {
             var addCapacity = _capacityService.AddCapacity(capacity);

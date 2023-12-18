@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static NpgsqlTypes.NpgsqlTsQuery;
 
 namespace demo_repository
 {
@@ -25,6 +26,55 @@ namespace demo_repository
                 obj.CreateNewStoredProcedure("get_all_review_result_detail_staffid");
                 obj.AddParameter("@userid", userId);
                 return obj.ExecStoreProcedureToList<AllReviewResultUser>();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                obj.Disconnect();
+                obj.Dispose();
+            }
+        }
+
+        public List<AllReviewResultUser> GetAllReviewResultUsersByUseridAndReviewId(int reviewid, int userId)
+        public List<Staff> GetAllStaff(int userId)
+        {
+            var obj = _baseService.GetConnection();
+            try
+            {
+                obj.Connect();
+                obj.CreateNewStoredProcedure("get_all_review_result_detail_staffid_and_reviewid");
+                obj.AddParameter("@userid", userId);
+                obj.AddParameter("@reviewid", reviewid);
+                return obj.ExecStoreProcedureToList<AllReviewResultUser>();
+                obj.CreateNewStoredProcedure("get_all_review_detail_by_userid");
+                obj.AddParameter("@userid", userId);
+                return obj.ExecStoreProcedureToList<Staff>();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                obj.Disconnect();
+                obj.Dispose();
+            }
+        }
+
+        public string UpdateStaff(int userId, int nodeid, string positionjob)
+        {
+            var obj = _baseService.GetConnection();
+            try
+            {
+                obj.Connect();
+                obj.CreateNewStoredProcedure("update_staff");
+                obj.AddParameter("@userid", userId);
+                obj.AddParameter("@nodeid", nodeid);
+                obj.AddParameter("@positionjob", positionjob);
+                return obj.ExecStoreToString();
             }
             catch (Exception ex)
             {

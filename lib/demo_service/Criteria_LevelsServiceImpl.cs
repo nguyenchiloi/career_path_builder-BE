@@ -33,6 +33,28 @@ namespace demo_service
             }
         }
 
+        public ResponseMessage AddListCriterialToLevels(List<Levels_Criteria> listLevel)
+        {
+            ResponseMessage rp = new ResponseMessage();
+            try
+            {
+                foreach (var item in listLevel)
+                {
+                    _repo.AddCriteriaToLevel(item.point, item.coefficien, item.criteriaid, item.nodeid);
+                }
+                rp.message = "Thêm tiêu chí cho cột mốc thành công";
+                rp.status = MessageStatus.success;
+                return rp;
+            }
+            catch (Exception ex)
+            {
+                rp.message = ex.Message;
+                rp.status = MessageStatus.error;
+                rp.data = null;
+                return rp;
+            }
+        }
+
         public ResponseMessage GetCriteriaByLevel(int levelid)
         {
             ResponseMessage rp = new ResponseMessage();

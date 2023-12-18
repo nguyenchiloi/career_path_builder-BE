@@ -45,10 +45,10 @@ namespace demo_service
                 rp.data = _repo.GetAllReviewPeriod();
                 rp.message = "Lấy danh sách đợt đánh giá thành công";
             }
-            catch
+            catch(Exception ex ) 
             {
                 rp.status = MessageStatus.error;
-                rp.message = "Lấy danh sách đợt đánh giá thất bại";
+                rp.message = ex.Message;
                 rp.data = null;
             }
             return rp;
@@ -63,10 +63,10 @@ namespace demo_service
                 rp.data = _repo.GetAllReviewPeriod1(id);
                 rp.message = "Lấy danh sách đợt đánh giá thành công";
             }
-            catch
+            catch (Exception ex)
             {
                 rp.status = MessageStatus.error;
-                rp.message = "Lấy danh sách đợt đánh giá thất bại";
+                rp.message = ex.Message;
                 rp.data = null;
             }
             return rp;

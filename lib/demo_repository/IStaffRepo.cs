@@ -12,5 +12,6 @@ namespace demo_repository
         public string AddStaff(string staffname, bool gender, DateTime dateofbirth, string department, string positionjob, int nodeid);
         public List<Staff> GetAllStaff();
         public List<Staff> GetStaffByReviewId(int reviewId);
+        public List<Staff> GetStaffByUserId(int userId);
     }
 }

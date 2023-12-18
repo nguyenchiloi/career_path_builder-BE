@@ -1,6 +1,9 @@
-﻿using demo_service;
+﻿using demo_common;
+using demo_service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace career_path_builder_BE.Controllers
 {
@@ -16,30 +19,39 @@ namespace career_path_builder_BE.Controllers
             _logger = logger;
             _logger.LogInformation("AllReviewResultUserController Called");
         }
-
-        [HttpGet]
-        [Route("getAllReviewResultUser")]
-        public async Task<IActionResult> GetAllStaff(int staffId)
-        {
-            _logger.LogInformation("getAllReviewResultUser method starting");
-            var getStaff = _allReviewResultUserService.GetAllReviewResultUser(staffId);
-            return Ok(getStaff);
-        }
         [HttpGet]
         [Route("getAllReviewResultUserId")]
-        public async Task<IActionResult> GetAllReviewResultUserId(int staffId)
+        public async Task<IActionResult> GetAllReviewResultUserId(int staffId, int reviewid)
         {
             _logger.LogInformation("getAllReviewResultUser method starting");
-            var getStaff = _allReviewResultUserService.GetReviewResultUserByUserid(staffId);
+            var getStaff = _allReviewResultUserService.GetReviewResultUserByUserid(staffId, reviewid);
             return Ok(getStaff);
         }
         [HttpGet]
         [Route("getAllReviewResultUserByKey")]
-        public async Task<IActionResult> GetAllResultByKey(int staffId, int pathid)
+        public async Task<IActionResult> GetAllResultByKey(int staffId, int pathid, int reviewid)
         {
             _logger.LogInformation("getAllReviewResultUserByKey method starting");
-            var getStaff = _allReviewResultUserService.GetReviewResultUserByKey(staffId, pathid);
+            var getStaff = _allReviewResultUserService.GetReviewResultUserByKey(staffId, pathid, reviewid);
             return Ok(getStaff);
         }
+        [HttpGet]
+        [Route("getUserCompare")]
+        public IActionResult GetUserCompare(int pathid, int reviewid, int userid1, int userid2)
+        {
+            _logger.LogInformation("getAvarageReviewResult method starting");
+            var getStaff = _allReviewResultUserService.GetUserCompare(pathid, reviewid, userid1, userid2);
+            return Ok(getStaff);
+        }
+        /*[HttpGet]
+        [Route("getAvarageReviewResult1")]
+        public IActionResult GetAvarageReviewResult1(int pathid)
+        {
+            ResponseMessage response = new ResponseMessage();
+            _logger.LogInformation("getAvarageReviewResult method starting");
+            var getStaff = JsonConvert.SerializeObject(_allReviewResultUserService.GetAverageReviewResultOnlyUser(pathid));
+            response.data = getStaff;
+            return Ok(response);
+        }*/
     }
 }

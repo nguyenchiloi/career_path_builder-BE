@@ -11,6 +11,7 @@ namespace demo_service
     public interface ICriteria_LevelsService
     {
         public ResponseMessage AddCriteriaToLevels(Levels_Criteria levels_Criteria);
+        public ResponseMessage AddListCriterialToLevels(List<Levels_Criteria> listLevel);
         public ResponseMessage GetCriteriaByLevel(int levelid);
     }
 }
