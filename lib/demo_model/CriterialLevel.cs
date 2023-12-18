@@ -8,7 +8,8 @@ namespace demo_model
 {
     public class CriterialLevel
     {
-
+        public int userid { get; set; }
+        public string staffname { get; set; } = string.Empty;
         public int nodeid { get; set; }
         public int pathid { get; set; }
         public string levelname { get; set; }
