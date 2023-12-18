@@ -11,5 +11,6 @@ namespace demo_service
     {
         public ResponseMessage GetAllCriteriaByCapacity(int capacityid);
         public ResponseMessage GetAllCriteriaByPathid(int pathid);
+        public ResponseMessage GetCriteriaDetailByID(int criteriaid);
     }
 }
