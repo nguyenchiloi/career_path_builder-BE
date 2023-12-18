@@ -11,5 +11,7 @@ namespace demo_repository
     {
         public List<CriteriaByCapacity> GetCriteriaByCapacity(int p_capacityid);
         public List<CriteriaByCapacity> GetCriteriaByPathid(int p_pathid);
+        public List<Criteria> GetCriteriaDetaiByID(int p_criteriaid);
+
     }
 }
