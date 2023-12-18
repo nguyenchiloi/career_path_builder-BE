@@ -54,13 +54,31 @@ namespace demo_service
             return rp;
         }
 
-        public ResponseMessage GetReviewPeriod(int id)
+        public ResponseMessage GetAllReviewPeriodByReview(int id, int p_pathid)
         {
             ResponseMessage rp = new ResponseMessage();
             try
             {
                 rp.status = MessageStatus.success;
-                rp.data = _repo.GetAllReviewPeriod1(id);
+                rp.data = _repo.GetAllReviewPeriodByReview(id,p_pathid);
+                rp.message = "Lấy danh sách đợt đánh giá thành công";
+            }
+            catch (Exception ex)
+            {
+                rp.status = MessageStatus.error;
+                rp.message = ex.Message;
+                rp.data = null;
+            }
+            return rp;
+        }
+
+        public ResponseMessage GetAllReviewPeriodByPath(int pathid)
+        {
+            ResponseMessage rp = new ResponseMessage();
+            try
+            {
+                rp.status = MessageStatus.success;
+                rp.data = _repo.GetAllReviewPeriodByPath(pathid);
                 rp.message = "Lấy danh sách đợt đánh giá thành công";
             }
             catch (Exception ex)
