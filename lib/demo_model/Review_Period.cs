@@ -7,5 +7,7 @@
         public DateTime timestart { get; set; }
         public DateTime timeend { get; set; }
         public int pathid { get; set; }
+        public string pathname { get; set; } = string.Empty;
+
     }
 }

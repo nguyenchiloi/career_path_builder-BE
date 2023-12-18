@@ -12,7 +12,8 @@ namespace demo_service
     {
         public List<Review_Period> GetAllReviewPeriod();
         public ResponseMessage GetAllReviewPeriodResponse();
-        public ResponseMessage GetReviewPeriod(int id);
+        public ResponseMessage GetAllReviewPeriodByReview(int reviewid,int pathid);
+        public ResponseMessage GetAllReviewPeriodByPath(int pathid);
         public ResponseMessage AddReviewPeriod(Review_Period review_period);
     }
 }

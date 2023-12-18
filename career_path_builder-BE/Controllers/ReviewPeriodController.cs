@@ -26,10 +26,18 @@ namespace career_path_builder_BE.Controllers
         }
 
         [HttpGet]
-        [Route("getAllReviewPeriod1")]
-        public async Task<IActionResult> getreviewperiod(int id)
+        [Route("GetAllReviewPeriodByReviewId")]
+        public async Task<IActionResult> GetAllReviewPeriodByReviewId(int reviewid, int pathid)
         {
-            var getlist = _reviewperiod.GetReviewPeriod(id);
+            var getlist = _reviewperiod.GetAllReviewPeriodByReview(reviewid,pathid);
+            return Ok(getlist);
+        }
+
+        [HttpGet]
+        [Route("GetAllReviewPeriodByPathId")]
+        public async Task<IActionResult> GetAllReviewPeriodByPathId(int id)
+        {
+            var getlist = _reviewperiod.GetAllReviewPeriodByPath(id);
             return Ok(getlist);
         }
 

@@ -54,7 +54,28 @@ namespace demo_repository
             }
         }
 
-        public string GetAllReviewPeriod1(int p_reviewid)
+        public List<Review_Period> GetAllReviewPeriodByPath(int pathid)
+        {
+            var obj = _baseService.GetConnection();
+            try
+            {
+                obj.Connect();
+                obj.CreateNewStoredProcedure("get_all_review_detail_by_pathid");
+                obj.AddParameter("@pathid", pathid);
+                return obj.ExecStoreProcedureToList<Review_Period>();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                obj.Disconnect();
+                obj.Dispose();
+            }
+        }
+
+        public List<Review_Period> GetAllReviewPeriodByReview(int p_reviewid,int p_pathid)
         {
             var obj = _baseService.GetConnection();
             try
@@ -62,7 +83,8 @@ namespace demo_repository
                 obj.Connect();
                 obj.CreateNewStoredProcedure("get_all_review_detail_by_reviewid");
                 obj.AddParameter("@reviewid", p_reviewid);
-                return obj.ExecStoreToString();
+                obj.AddParameter("@pathid", p_pathid);
+                return obj.ExecStoreProcedureToList<Review_Period>();
             }
             catch (Exception ex)
             {
