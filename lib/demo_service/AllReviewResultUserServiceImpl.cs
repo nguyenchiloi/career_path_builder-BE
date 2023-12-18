@@ -76,12 +76,12 @@ namespace demo_service
             float avarage = sum / assessor;
             return avarage;
         }
-        public ResponseMessage GetReviewResultUserByKey(int staffId, int pathid)
+        public ResponseMessage GetReviewResultUserByKey(int staffId, int pathid, int reviewid)
         {
             ResponseMessage rp = new ResponseMessage();
             try
             {
-                var list = _repo.GetAllReviewResultUsers(staffId);
+                var list = _repo.GetAllReviewResultUsersByUseridAndReviewId(reviewid, staffId);
                 /*float sumCriterial1 = CriterialResult(list, 1);
                 float sumCriterial2 = CriterialResult(list, 2);   
                 float sumCriterial3 = CriterialResult(list, 3);
@@ -159,7 +159,7 @@ namespace demo_service
             return rp;
         }
 
-        public ResponseMessage GetReviewResultUserByUserid(int staffid)
+        public ResponseMessage GetReviewResultUserByUserid(int staffid, int reviewid)
         {
 
 
@@ -170,7 +170,7 @@ namespace demo_service
                 //lấy đợt gần nhất
                 var listReviewPeriod = _reviewPeriodRepo.GetAllReviewPeriod();
 
-                var listGetAllByStaffid = _repo.GetAllReviewResultUsers(staffid);
+                var listGetAllByStaffid = _repo.GetAllReviewResultUsersByUseridAndReviewId(reviewid, staffid);
 
                 /*var a=listGetAllByStaffid.GroupBy(x=> new {x.userdanhgia ,x.ratingcoefficient}).Select(i=> new GetAllReviewResultUser
                 {
@@ -246,5 +246,64 @@ namespace demo_service
             throw new NotImplementedException();
         }
 
+        public ResponseMessage GetUserCompare(int pathid, int reviewid, int userid1, int userid2)
+        {
+            ResponseMessage rp = new ResponseMessage();
+            try
+            {
+                GetUserCompare getUserCompare = new GetUserCompare();
+                var user1 = GetOnlyUserCompare(userid1, pathid, reviewid);
+                var user2 = GetOnlyUserCompare(userid2, pathid, reviewid);
+                getUserCompare.user1 = user1;
+                getUserCompare.user2 = user2;
+                rp.status = MessageStatus.success;
+                rp.data = getUserCompare;
+                rp.message = "lấy các user để so sánh thành công";
+                rp.errorcode = 0;
+            }
+            catch (Exception ex)
+            {
+                rp.status = MessageStatus.error;
+                rp.message = ex.Message;
+                rp.data = null;
+                rp.errorcode = -1;
+            }
+            return rp;
+        }
+        public GetAllAverageReviewResultUser GetOnlyUserCompare(int userid, int pathid, int reviewid) {
+            GetAllAverageReviewResultUser getAllAverageReviewResultUser = new GetAllAverageReviewResultUser();
+            try
+            {
+                var userInfo = _staffRepo.GetStaffByUserId(userid);
+                var list = _repo.GetAllReviewResultUsersByUseridAndReviewId(reviewid, userid);                  
+                List<GetCriteriaLevelAverage> newList = new List<GetCriteriaLevelAverage>();
+                if (list.Count>0)
+                {
+                    //lấy danh sách tiêu chí của khung năng lực theo pathid
+                    var listCriterial = _criteriaByCapacityRepo.GetCriteriaByPathid(pathid);
+                    foreach (var item in listCriterial)
+                    {
+                        float a = CriterialResult(list, item.criteriaid);
+                        GetCriteriaLevelAverage criteriaByCapacity = new GetCriteriaLevelAverage();
+                        criteriaByCapacity.criteriaid = item.criteriaid;
+                        criteriaByCapacity.criterianame = item.criterianame;
+                        criteriaByCapacity.unit = item.unit;
+                        criteriaByCapacity.point = a;
+                        newList.Add(criteriaByCapacity);
+                    }
+                }
+                else
+                {
+                    newList = new List<GetCriteriaLevelAverage>();
+                }
+                getAllAverageReviewResultUser.staff = userInfo[0];
+                getAllAverageReviewResultUser.dataReview = newList;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+            return getAllAverageReviewResultUser;
+        }
     }
 }

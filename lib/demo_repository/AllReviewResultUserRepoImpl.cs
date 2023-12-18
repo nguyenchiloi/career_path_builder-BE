@@ -38,12 +38,17 @@ namespace demo_repository
             }
         }
 
+        public List<AllReviewResultUser> GetAllReviewResultUsersByUseridAndReviewId(int reviewid, int userId)
         public List<Staff> GetAllStaff(int userId)
         {
             var obj = _baseService.GetConnection();
             try
             {
                 obj.Connect();
+                obj.CreateNewStoredProcedure("get_all_review_result_detail_staffid_and_reviewid");
+                obj.AddParameter("@userid", userId);
+                obj.AddParameter("@reviewid", reviewid);
+                return obj.ExecStoreProcedureToList<AllReviewResultUser>();
                 obj.CreateNewStoredProcedure("get_all_review_detail_by_userid");
                 obj.AddParameter("@userid", userId);
                 return obj.ExecStoreProcedureToList<Staff>();
