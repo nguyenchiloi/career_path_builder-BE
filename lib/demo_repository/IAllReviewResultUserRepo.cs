@@ -10,5 +10,6 @@ namespace demo_repository
     public interface IAllReviewResultUserRepo
     {
         public List<AllReviewResultUser> GetAllReviewResultUsers(int userId);
+        public List<AllReviewResultUser> GetAllReviewResultUsersByUseridAndReviewId(int reviewid, int userId);
     }
 }

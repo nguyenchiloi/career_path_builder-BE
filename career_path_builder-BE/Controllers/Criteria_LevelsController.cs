@@ -25,7 +25,14 @@ namespace career_path_builder_BE.Controllers
             var addCriteriaToLevel = _criteria_levelsService.AddCriteriaToLevels(levels_Criteria);
             return Ok(addCriteriaToLevel);
         }
-
+        [HttpPost]
+        [Route("addListCriteriaToLevel")]
+        public async Task<IActionResult> AddListCriteriaToLevel(List<Levels_Criteria> listCriterial)
+        {
+            _logger.LogInformation("addCriteriaToLevel called");
+            var addCriteriaToLevel = _criteria_levelsService.AddListCriterialToLevels(listCriterial);
+            return Ok(addCriteriaToLevel);
+        }
         [HttpGet]
         [Route("GetCriteriaByLevelId")]
         public async Task<IActionResult> GetCriteriaByLevelId(int levelId)
