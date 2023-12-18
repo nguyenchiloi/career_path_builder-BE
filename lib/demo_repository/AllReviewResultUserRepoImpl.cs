@@ -38,9 +38,7 @@ namespace demo_repository
             }
         }
 
-        public List<AllReviewResultUser> GetAllReviewResultUsersByUseridAndReviewId(int reviewid, int userId)
-        public List<Staff> GetAllStaff(int userId)
-        {
+        public List<AllReviewResultUser> GetAllReviewResultUsersByUseridAndReviewId(int reviewid, int userId) {
             var obj = _baseService.GetConnection();
             try
             {
@@ -49,9 +47,6 @@ namespace demo_repository
                 obj.AddParameter("@userid", userId);
                 obj.AddParameter("@reviewid", reviewid);
                 return obj.ExecStoreProcedureToList<AllReviewResultUser>();
-                obj.CreateNewStoredProcedure("get_all_review_detail_by_userid");
-                obj.AddParameter("@userid", userId);
-                return obj.ExecStoreProcedureToList<Staff>();
             }
             catch (Exception ex)
             {
@@ -62,6 +57,11 @@ namespace demo_repository
                 obj.Disconnect();
                 obj.Dispose();
             }
+        }
+
+        public List<Staff> GetAllStaff(int userId)
+        {
+            throw new NotImplementedException();
         }
 
         public string UpdateStaff(int userId, int nodeid, string positionjob)
