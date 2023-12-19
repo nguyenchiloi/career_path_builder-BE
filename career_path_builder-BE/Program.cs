@@ -46,6 +46,7 @@ builder.Services.AddScoped<ICapacityService, CapacityServiceImpl>();
 //CriteriaByCapacity
 builder.Services.AddScoped<ICriteriaByCapacityRepo, CriteriaByCapacityRepoImpl>();
 builder.Services.AddScoped<ICriteriaByCapacityService, CriteriaByCapacityServiceImpl>();
+//Criteria_Detail
 
 
 var app = builder.Build();

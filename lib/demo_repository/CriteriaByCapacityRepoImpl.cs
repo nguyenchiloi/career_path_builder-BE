@@ -58,5 +58,25 @@ namespace demo_repository
                 obj.Disconnect();
             }
         }
+        public List<Criteria> GetCriteriaDetaiByID(int p_criteriaid)
+        {
+            var obj = _baseService.GetConnection();
+            try
+            {
+                obj.Connect();
+                obj.CreateNewStoredProcedure("get_criteria_detail_by_criteriaid");
+                obj.AddParameter("@criteriaid", p_criteriaid);
+                return obj.ExecStoreProcedureToList<Criteria>();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                obj.Dispose();
+                obj.Disconnect();
+            }
+        }
     }
 }
