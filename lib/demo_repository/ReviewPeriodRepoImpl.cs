@@ -1,5 +1,6 @@
 ﻿using demo_core;
 using demo_model;
+using System.IO;
 
 namespace demo_repository
 {
@@ -89,6 +90,30 @@ namespace demo_repository
             catch (Exception ex)
             {
                 throw;
+            }
+            finally
+            {
+                obj.Disconnect();
+                obj.Dispose();
+            }
+        }
+
+        public string UpdateReviewPeriod(int reviewid, string p_reviewname, DateTime timestart, DateTime timeend)
+        {
+            var obj = _baseService.GetConnection();
+            try
+            {
+                obj.Connect();
+                obj.CreateNewStoredProcedure("update_Review_Period");
+                obj.AddParameter("@reviewid", reviewid);
+                obj.AddParameter("@reviewname", p_reviewname);
+                obj.AddParameter("@timestart", timestart);
+                obj.AddParameter("@timeend", timeend);
+                return obj.ExecStoreToString();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception();
             }
             finally
             {

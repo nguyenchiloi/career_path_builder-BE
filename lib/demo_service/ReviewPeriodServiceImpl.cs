@@ -1,6 +1,7 @@
 ﻿using demo_common;
 using demo_model;
 using demo_repository;
+using System.IO;
 
 namespace demo_service
 {
@@ -80,6 +81,24 @@ namespace demo_service
                 rp.status = MessageStatus.success;
                 rp.data = _repo.GetAllReviewPeriodByPath(pathid);
                 rp.message = "Lấy danh sách đợt đánh giá thành công";
+            }
+            catch (Exception ex)
+            {
+                rp.status = MessageStatus.error;
+                rp.message = ex.Message;
+                rp.data = null;
+            }
+            return rp;
+        }
+
+        public ResponseMessage UpdateReviewPeriod(Review_Period review_periods)
+        {
+            ResponseMessage rp = new ResponseMessage();
+            try
+            {
+                rp.status = MessageStatus.success;
+                rp.data = _repo.UpdateReviewPeriod(review_periods.reviewid,review_periods.reviewname,review_periods.timestart,review_periods.timeend);
+                rp.message = "Cặp nhật đợt đánh giá thành công";
             }
             catch (Exception ex)
             {

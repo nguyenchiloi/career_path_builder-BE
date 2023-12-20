@@ -48,6 +48,14 @@ namespace career_path_builder_BE.Controllers
             var add = _reviewperiod.AddReviewPeriod(review_Period);
             return Ok(add);
         }
+
+        [HttpPost]
+        [Route("updateReviewPeriod")]
+        public async Task<IActionResult> updateReviewPeriod(Review_Period review_Period)
+        {
+            var update = _reviewperiod.UpdateReviewPeriod(review_Period);
+            return Ok(update);
+        }
     }
 
     
