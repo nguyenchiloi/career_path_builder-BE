@@ -13,6 +13,7 @@ namespace demo_repository
         public List<Review_Period> GetAllReviewPeriodByReview(int p_reviewid,int p_pathid);
         public List<Review_Period> GetAllReviewPeriodByPath(int pathid);
         public string AddReviewPeriod(string p_reviewname, DateTime timestart, DateTime timeend,int pathId);
+        public string UpdateReviewPeriod(int reviewid, string p_reviewname, DateTime timestart, DateTime timeend);
 
     }
 }
