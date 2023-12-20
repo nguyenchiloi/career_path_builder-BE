@@ -12,5 +12,6 @@ namespace demo_service
     {
         public ResponseMessage AddAssessor(List<Assessor> assessors);
         public ResponseMessage GetAllUserByAssessorIDReviewID(int  assessorID, int reviewID);
+        public ResponseMessage GetListAssessorByReviewId(int reviewId);
     }
 }

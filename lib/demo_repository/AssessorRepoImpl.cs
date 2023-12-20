@@ -62,5 +62,27 @@ namespace demo_repository
                 obj.Disconnect();
             }
         }
+
+        public List<Assessor> GetListAssessorByReviewId(int p_reviewid)
+        {
+            var obj = _baseService.GetConnection();
+            try
+            {
+                obj.Connect();
+                obj.CreateNewStoredProcedure("get_list_assessors_by_reviewId");
+                obj.AddParameter("@reviewid", p_reviewid);
+                return obj.ExecStoreProcedureToList<Assessor>();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                obj.Dispose();
+                obj.Disconnect();
+            }
+        }
     }
 }
