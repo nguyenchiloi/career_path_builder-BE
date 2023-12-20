@@ -72,5 +72,24 @@ namespace demo_service
             rp.data = null;
             return rp;
         }
+
+        public ResponseMessage GetListAssessorByReviewId(int reviewId)
+        {
+            ResponseMessage rp = new ResponseMessage();
+            try
+            {
+                rp.data = _repo.GetListAssessorByReviewId(reviewId);
+                rp.message = "Lấy danh sách đánh giá thành công";
+                rp.status = MessageStatus.success;
+                return rp;
+            }
+            catch (Exception ex)
+            {
+                rp.message = ex.Message;
+                rp.status = MessageStatus.error;
+                rp.data = null;
+                return rp;
+            }
+        }
     }
 }

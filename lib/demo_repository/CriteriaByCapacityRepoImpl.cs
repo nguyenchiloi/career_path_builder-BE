@@ -21,7 +21,7 @@ namespace demo_repository
             try
             {
                 obj.Connect();
-                obj.CreateNewStoredProcedure("get_all_criterial_by_capacity");
+                obj.CreateNewStoredProcedure("get_all_criteria_by_capacity");
                 obj.AddParameter("@capacityid", p_capacityid);
                 return obj.ExecStoreProcedureToList<CriteriaByCapacity>();
 

@@ -14,7 +14,7 @@ namespace career_path_builder_BE.Controllers
             this._assessorService = assessorService;
         }
         [HttpPost]
-        [Route("addAssensor")]
+        [Route("addAssessor")]
         public async Task<IActionResult> AddAssessor([FromBody] List<Assessor> assessors)
         {
             var addAssensor = _assessorService.AddAssessor(assessors);
@@ -26,6 +26,13 @@ namespace career_path_builder_BE.Controllers
         {
             var addAssensor = _assessorService.GetAllUserByAssessorIDReviewID(assessorid, reviewid);
             return Ok(addAssensor);
+        }
+        [HttpGet]
+        [Route("GetListAssessorByReviewId")]
+        public async Task<IActionResult> GetListAssessorByReviewId(int reviewId)
+        {
+            var getListAssessor = _assessorService.GetListAssessorByReviewId(reviewId);
+            return Ok(getListAssessor);
         }
     }
 }

@@ -11,5 +11,6 @@ namespace demo_repository
     {
         public string AddAssessor(int p_assessorid, int p_userid, float p_ratingcoefficient, int p_reviewid);
         public List<AssessorUser> GetAllUserByAssessorIDReviewID(int p_assessorid, int p_reviewid);
+        public List<Assessor> GetListAssessorByReviewId(int p_reviewid);
     }
 }
