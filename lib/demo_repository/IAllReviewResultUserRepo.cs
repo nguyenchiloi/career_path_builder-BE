@@ -11,6 +11,7 @@ namespace demo_repository
     {
         public List<AllReviewResultUser> GetAllReviewResultUsers(int userId);
         public List<AllReviewResultUser> GetAllReviewResultUsersByUseridAndReviewId(int reviewid, int userId);
+        public List<AllReviewResultUser> GetAllStaffReviewResultDetail(int userId,int reviewId, int reviewresultsId);
         public string UpdateStaff(int userId, int nodeid, string positionjob);
         public List<Staff> GetAllStaff(int userId);
 

@@ -44,7 +44,7 @@ namespace demo_service
             try
             {
                 rp.status = MessageStatus.success;
-                rp.data = _staffRepo.GetAllStaff();
+                rp.data = _staffRepo.GetAllStaff().ToList().OrderBy(x => x.userId).ToList();
                 rp.message = "lấy tất cả nhân viên thành công";
                 rp.errorcode = 0;
             }

@@ -80,6 +80,29 @@ namespace demo_repository
             }
         }
 
+        public List<AllReviewResultUser> GetAllStaffReviewResultDetail(int userId, int reviewId, int reviewresultsId)
+        {
+            var obj = _baseService.GetConnection();
+            try
+            {
+                obj.Connect();
+                obj.CreateNewStoredProcedure("get_all_staff_review_result_detail");
+                obj.AddParameter("@userid", userId);
+                obj.AddParameter("@reviewid", reviewId);
+                obj.AddParameter("@reviewresultid", reviewresultsId);
+                return obj.ExecStoreProcedureToList<AllReviewResultUser>();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                obj.Disconnect();
+                obj.Dispose();
+            }
+        }
+
         public string UpdateStaff(int userId, int nodeid, string positionjob)
         {
             var obj = _baseService.GetConnection();

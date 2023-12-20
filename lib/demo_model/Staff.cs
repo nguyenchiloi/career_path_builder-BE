@@ -8,7 +8,7 @@ namespace demo_model
 {
     public class Staff
     {
-        public int staffId {  get; set; }
+        public int userId {  get; set; }
         public string staffName { get; set; }
         public bool gender { get; set; }
         public DateTime dateofbirth { get; set; }

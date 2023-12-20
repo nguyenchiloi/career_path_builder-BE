@@ -17,7 +17,7 @@ namespace demo_service
         private readonly ICriteriaByCapacityRepo _criteriaByCapacityRepo;
         private readonly IReviewPeriodRepo _reviewPeriodRepo;
         private readonly IStaffRepo _staffRepo;
-        public AllReviewResultUserServiceImpl(IAllReviewResultUserRepo repo, ICreterialLevelRepo criterialRepo, 
+        public AllReviewResultUserServiceImpl(IAllReviewResultUserRepo repo, ICreterialLevelRepo criterialRepo,
             IReviewResultRepo reviewResultRepo, ICriteriaByCapacityRepo criteriaByCapacityRepo, IReviewPeriodRepo reviewPeriodRepo, IStaffRepo staffRepo)
         {
             this._repo = repo;
@@ -74,7 +74,7 @@ namespace demo_service
                 assessor += heso;
             }
             float avarage = sum / assessor;
-            return avarage;
+            return (float)Math.Round(avarage, 2);
         }
         public ResponseMessage GetReviewResultUserByKey(int staffId, int pathid, int reviewid)
         {
@@ -140,7 +140,9 @@ namespace demo_service
                     foreach (var item in staffname)
                     {
                         result.staffname = item.staffName;
+                        result.positionjob = item.positionjob;
                     }
+                    result.reviewname = list[0].reviewname;
                     _reviewResultRepo.UpdateReviewResult(list[0].reviewresultsid, result.nodeid);
                     _repo.UpdateStaff(staffId, result.nodeid, result.levelname);
                 }
@@ -159,7 +161,7 @@ namespace demo_service
             return rp;
         }
 
-        public ResponseMessage GetReviewResultUserByUserid(int staffid, int reviewid)
+        public ResponseMessage GetReviewResultUserByUserid(int staffid, int reviewid, int reviewresultid)
         {
 
 
@@ -170,7 +172,7 @@ namespace demo_service
                 //lấy đợt gần nhất
                 var listReviewPeriod = _reviewPeriodRepo.GetAllReviewPeriod();
 
-                var listGetAllByStaffid = _repo.GetAllReviewResultUsersByUseridAndReviewId(reviewid, staffid);
+                var listGetAllByStaffid = _repo.GetAllStaffReviewResultDetail(staffid, reviewid, reviewresultid);
 
                 /*var a=listGetAllByStaffid.GroupBy(x=> new {x.userdanhgia ,x.ratingcoefficient}).Select(i=> new GetAllReviewResultUser
                 {
@@ -182,7 +184,7 @@ namespace demo_service
                 {
                     userdanhgia = i.Key,
                     dataReview = i.ToList().OrderBy(x => x.criteriaid).ToList(),
-                }).ToList().OrderByDescending(x=>x.userdanhgia== staffid).ToList();
+                }).ToList().OrderByDescending(x => x.userdanhgia == staffid).ToList();
 
                 rp.status = MessageStatus.success;
                 rp.data = a;
@@ -209,23 +211,23 @@ namespace demo_service
                 var list = _repo.GetAllReviewResultUsers(staffId);
 
 
-                 List<float> listcriteria = new List<float>();
-                 //lấy danh sách tiêu chí của khung năng lực theo pathid
-                 var listCriterial = _criteriaByCapacityRepo.GetCriteriaByPathid(pathid);
-                 List<GetCriteriaLevelAverage> newList = new List<GetCriteriaLevelAverage>();
-                 foreach (var item in listCriterial)
-                 {
-                     float a = CriterialResult(list, item.criteriaid);
-                     GetCriteriaLevelAverage criteriaByCapacity = new GetCriteriaLevelAverage();
-                     criteriaByCapacity.criteriaid = item.criteriaid;
-                     criteriaByCapacity.criterianame = item.criterianame;
-                     criteriaByCapacity.unit = item.unit;
-                     criteriaByCapacity.point = a;
-                     newList.Add(criteriaByCapacity);
-                     listcriteria.Add(a);
-                 }
-                 getAllAverageReviewResultUser.staff = userInfo[0];
-                 getAllAverageReviewResultUser.dataReview = newList;
+                List<float> listcriteria = new List<float>();
+                //lấy danh sách tiêu chí của khung năng lực theo pathid
+                var listCriterial = _criteriaByCapacityRepo.GetCriteriaByPathid(pathid);
+                List<GetCriteriaLevelAverage> newList = new List<GetCriteriaLevelAverage>();
+                foreach (var item in listCriterial)
+                {
+                    float a = CriterialResult(list, item.criteriaid);
+                    GetCriteriaLevelAverage criteriaByCapacity = new GetCriteriaLevelAverage();
+                    criteriaByCapacity.criteriaid = item.criteriaid;
+                    criteriaByCapacity.criterianame = item.criterianame;
+                    criteriaByCapacity.unit = item.unit;
+                    criteriaByCapacity.point = a;
+                    newList.Add(criteriaByCapacity);
+                    listcriteria.Add(a);
+                }
+                getAllAverageReviewResultUser.staff = userInfo[0];
+                getAllAverageReviewResultUser.dataReview = newList;
                 rp.status = MessageStatus.success;
                 rp.data = getAllAverageReviewResultUser;
                 rp.message = "lấy các user để so sánh thành công";
@@ -270,14 +272,15 @@ namespace demo_service
             }
             return rp;
         }
-        public GetAllAverageReviewResultUser GetOnlyUserCompare(int userid, int pathid, int reviewid) {
+        public GetAllAverageReviewResultUser GetOnlyUserCompare(int userid, int pathid, int reviewid)
+        {
             GetAllAverageReviewResultUser getAllAverageReviewResultUser = new GetAllAverageReviewResultUser();
             try
             {
                 var userInfo = _staffRepo.GetStaffByUserId(userid);
-                var list = _repo.GetAllReviewResultUsersByUseridAndReviewId(reviewid, userid);                  
+                var list = _repo.GetAllReviewResultUsersByUseridAndReviewId(reviewid, userid);
                 List<GetCriteriaLevelAverage> newList = new List<GetCriteriaLevelAverage>();
-                if (list.Count>0)
+                if (list.Count > 0)
                 {
                     //lấy danh sách tiêu chí của khung năng lực theo pathid
                     var listCriterial = _criteriaByCapacityRepo.GetCriteriaByPathid(pathid);
