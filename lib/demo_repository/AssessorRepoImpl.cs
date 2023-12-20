@@ -40,7 +40,7 @@ namespace demo_repository
             }
         }
 
-        public List<Assessor> GetAllUserByAssessorIDReviewID(int p_assessorid, int p_reviewid)
+        public List<AssessorUser> GetAllUserByAssessorIDReviewID(int p_assessorid, int p_reviewid)
         {
             var obj = _baseService.GetConnection();
             try
@@ -49,7 +49,7 @@ namespace demo_repository
                 obj.CreateNewStoredProcedure("get_all_userid_by_assessorid_reviewid");
                 obj.AddParameter("@assessorid", p_assessorid);
                 obj.AddParameter("@reviewid", p_reviewid);
-                return obj.ExecStoreProcedureToList<Assessor>();
+                return obj.ExecStoreProcedureToList<AssessorUser>();
 
             }
             catch (Exception ex)

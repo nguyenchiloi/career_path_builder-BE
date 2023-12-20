@@ -53,5 +53,14 @@ namespace career_path_builder_BE.Controllers
             response.data = getStaff;
             return Ok(response);
         }*/
+
+        [HttpGet]
+        [Route("getAllReviewResultByAssessoridReviewid")]
+        public IActionResult GetAllReviewResultByAssessoridReviewid(int assessorid, int reviewid)
+        {
+            _logger.LogInformation("getAvarageReviewResult method starting");
+            var getReviewResult = _allReviewResultUserService.GetAllReviewResultByAssessoridReviewid(assessorid, reviewid);
+            return Ok(getReviewResult);
+        }
     }
 }

@@ -125,5 +125,26 @@ namespace demo_repository
                 obj.Dispose();
             }
         }
+        public List<ReviewResult> GetAllReviewResultByAssessoridReviewid(int assessorid, int reviewid)
+        {
+            var obj = _baseService.GetConnection();
+            try
+            {
+                obj.Connect();
+                obj.CreateNewStoredProcedure("get_all_review_result_assessorid_and_reviewid");
+                obj.AddParameter("@assessorid", assessorid);
+                obj.AddParameter("@reviewid", reviewid);
+                return obj.ExecStoreProcedureToList<ReviewResult>();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                obj.Disconnect();
+                obj.Dispose();
+            }
+        }
     }
 }

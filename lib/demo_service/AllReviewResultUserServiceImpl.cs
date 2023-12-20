@@ -3,6 +3,7 @@ using demo_model;
 using demo_repository;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -307,6 +308,40 @@ namespace demo_service
                 return null;
             }
             return getAllAverageReviewResultUser;
+        }
+        public ResponseMessage GetAllReviewResultByAssessoridReviewid(int assessorid, int reviewid)
+        {
+            ResponseMessage rp = new ResponseMessage();
+            if (assessorid > 0 && reviewid > 0) {
+                try
+                {
+                    rp.status = MessageStatus.success;
+                    var list = _repo.GetAllReviewResultByAssessoridReviewid(assessorid, reviewid);
+                    var res = list.GroupBy(x => x.userid).Select(item => new ListReviewResult
+                    {
+                        userid = item.Key,
+                        reviewResults = item.ToList().OrderBy(x => x.criteriaid).ToList(),
+                    }).ToList();
+                    rp.data = res;
+                    rp.message = "lấy tất cả bài đánh giá nhân viên thành công";
+                    rp.errorcode = 0;
+                }
+                catch (Exception ex)
+                {
+                    rp.status = MessageStatus.error;
+                    rp.message = ex.Message;
+                    rp.data = null;
+                    rp.errorcode = -1;
+                }
+            }
+            else
+            {
+                rp.status = MessageStatus.error;
+                rp.message = "lấy tất cả bài đánh giá nhân viên không thành công";
+                rp.data = null;
+                rp.errorcode = -1;
+            }
+            return rp;
         }
     }
 }

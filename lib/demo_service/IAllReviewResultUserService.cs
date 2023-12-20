@@ -15,6 +15,7 @@ namespace demo_service
         public ResponseMessage GetReviewResultUserByUserid(int staffid, int reviewid, int reviewresultid);
         public ResponseMessage GetAverageReviewResultUser(int listuserid, int pathid);
         public ResponseMessage GetUserCompare(int pathid, int reviewid, int userid1, int userid2);
+        public ResponseMessage GetAllReviewResultByAssessoridReviewid(int assessorid, int reviewid);
 
     }
 }

@@ -60,5 +60,30 @@ namespace demo_service
                 return rp;
             }
         }
+        public ResponseMessage GetCriteriaDetailByID(int criteriaid)
+        {
+            ResponseMessage rp = new ResponseMessage();
+            try
+            {
+                if (criteriaid <= 0)
+                {
+                    rp.message = "Lấy chi tiết tiêu chí không thành công";
+                    rp.status = MessageStatus.error;
+                    rp.data = null;
+                    return rp;
+                }
+                rp.message = "Lấy chi tiết tiêu chí thành công";
+                rp.status = MessageStatus.success;
+                rp.data = _repo.GetCriteriaDetaiByID(criteriaid);
+                return rp;
+            }
+            catch (Exception ex)
+            {
+                rp.message = ex.Message;
+                rp.status = MessageStatus.error;
+                rp.data = null;
+                return rp;
+            }
+        }
     }
 }
