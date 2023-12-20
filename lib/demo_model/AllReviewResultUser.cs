@@ -18,5 +18,8 @@ namespace demo_model
         public float ratingcoefficient {  get; set; }
         public int userduocdanhgia { get; set; }
         public int reviewresultsid { get; set; }
+        public int reviewid { get; set;}
+        public string reviewname { get; set; } = string.Empty;
+
     }
 }
