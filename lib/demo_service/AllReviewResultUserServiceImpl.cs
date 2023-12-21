@@ -115,7 +115,7 @@ namespace demo_service
                     {
                         var listdata = listCriterialCompare.Where(x => x.nodeid == i).ToList();
                         float criteria = -1;// diem trung bình
-                        for (int j = 0; j < listdata.Count; j++)
+                        for (int j = 0; j < listdata.Count; j++) 
                         {
                             criteria = listcriteria[listdata[j].criteriaid - 1];
                             if (listdata[j].point <= criteria)
