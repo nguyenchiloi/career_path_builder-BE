@@ -29,10 +29,10 @@ namespace career_path_builder_BE.Controllers
         }
         [HttpGet]
         [Route("getAllReviewResultUserByKey")]
-        public async Task<IActionResult> GetAllResultByKey(int staffId, int pathid, int reviewid)
+        public async Task<IActionResult> GetAllResultByKey(int staffId, int pathid, int reviewid,int nodeid)
         {
             _logger.LogInformation("getAllReviewResultUserByKey method starting");
-            var getStaff = _allReviewResultUserService.GetReviewResultUserByKey(staffId, pathid, reviewid);
+            var getStaff = _allReviewResultUserService.GetReviewResultUserByKey(staffId, pathid, reviewid,nodeid);
             return Ok(getStaff);
         }
         [HttpGet]

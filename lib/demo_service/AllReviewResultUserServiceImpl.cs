@@ -77,7 +77,27 @@ namespace demo_service
             float avarage = sum / assessor;
             return (float)Math.Round(avarage, 2);
         }
-        public ResponseMessage GetReviewResultUserByKey(int staffId, int pathid, int reviewid)
+        private void DeQuy(int nodeid, List<CriterialLevel> listall, List<CriterialLevel> listresult) {
+            var obj = listall.Find(x => x.nodeid == nodeid);
+            if (obj != null)
+            {
+                listresult.Add(obj);
+                var objchild = listall.Find(x => x.parentid == obj.nodeid);
+                if (objchild!=null)
+                {
+                    DeQuy(objchild.nodeid, listall, listresult);
+                }
+                else
+                {
+                    return;
+                }
+            }
+            else
+            {
+                return;
+            }
+        }
+        public ResponseMessage GetReviewResultUserByKey(int staffId, int pathid, int reviewid,int nodeid)
         {
             ResponseMessage rp = new ResponseMessage();
             try
@@ -105,8 +125,12 @@ namespace demo_service
                     listcriteria.Add(a);
                 }
 
-                var listCriterialCompare = _criterialRepo.GetAllCriterialLevel(pathid);
-                CriterialLevel? result = null;
+                var listCriterialCompareall = _criterialRepo.GetAllCriterialLevel(pathid);
+                //nodeid
+                List<CriterialLevel> listCriterialCompare=new List<CriterialLevel>();
+                DeQuy(nodeid, listCriterialCompareall, listCriterialCompare);
+
+               CriterialLevel? result = null;
                 if (listCriterialCompare != null && listCriterialCompare.Count > 0)
                 {
                     int maxLevel = listCriterialCompare[listCriterialCompare.Count - 1].nodeid;// lấy node cao nhất
@@ -115,7 +139,7 @@ namespace demo_service
                     {
                         var listdata = listCriterialCompare.Where(x => x.nodeid == i).ToList();
                         float criteria = -1;// diem trung bình
-                        for (int j = 0; j < listdata.Count; j++)
+                        for (int j = 0; j < listdata.Count; j++) 
                         {
                             criteria = listcriteria[listdata[j].criteriaid - 1];
                             if (listdata[j].point <= criteria)
