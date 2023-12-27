@@ -12,6 +12,7 @@ namespace demo_model
         public string staffname { get; set; } = string.Empty;
         public string positionjob {  get; set; } = string.Empty;
         public int nodeid { get; set; }
+        public int parentid { get; set; }
         public int pathid { get; set; }
         public string levelname { get; set; } = string.Empty;
         public int criteriaid { get; set; }
